@@ -67,14 +67,18 @@ a {
 	-webkit-box-orient: vertical;
 	word-wrap:break-word;
 }
-
+.footer-nav ul::after, .bestchannel ul::after{
+    display: table;
+    content: "";
+    clear: both;
+    float: none;    
+}
 body{
+    width: 100%;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1;
     -webkit-text-size-adjust:antialiased;
     -moz-osx-font-smoothing:grayscale;
-    width: 100%;
-    min-width: 1060px;
     background-color:#fff;
 }
 .wrapper{
@@ -91,6 +95,7 @@ body{
 /* header  */
 .header{
     width: 100%;
+    min-width: 1060px;
     height: 64px;    
     box-shadow: inset 0 -1px 0 0 #dcdcdc;
     background-color: #fff;
@@ -229,7 +234,9 @@ body{
 .footer{    
     position: relative;    
     width: 100%;
+    min-width: 1060px;
     height: 130px;
+    margin-top: 120px;
     padding-top: 40px;
     background-color: #fcfcfc;
 }
@@ -238,12 +245,7 @@ body{
 .social-item, 
 .footer-nav li, 
 .social-item li{ float: left; }
-.footer-nav ul::after{
-    display: table;
-    content: "";
-    clear: both;
-    float: none;    
-}
+
 .footer-nav{ 
     width: 60%;
     border-right: 1px solid #eee;
@@ -264,7 +266,7 @@ body{
 
 /* main */
 .main{
-    width: 100%;
+    min-width: 1500px;
     padding-top: 17px;
 }
 .main .title{
@@ -307,26 +309,67 @@ body{
     color: #999;
     outline: none;
 }
-.swiper-slide{    
-    float: left;
+.swiper-slide{   
     width: 496px;
     background: #fff;
 }
 .img-area{
     position: relative;
-    max-height: 279px;
     margin-bottom: 16px;
     background-color: #e2e2e2;
     border-radius: 4px;
     border: solid 1px #e2e2e2;
 }
+.img-area .circle-box{
+    display: block;
+    position: absolute;       
+    top: 50%;
+    left: 50%;
+    margin-top: -36px;
+    margin-left: -36px;
+    width: 72px;
+    height: 72px;
+    text-align: center;
+    line-height: 72px;
+    border-radius: 36px;
+    background-color: #000;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out 0s;
+}
+.img-area:hover .circle-box{
+    display: block;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.img-area:hover .circle-box i{
+    font-size: 45px;
+    color: #fff;
+}
+.img-area:active .circle-box{
+    display: block;
+    cursor: pointer;
+    opacity: 0.3;
+}
 .img-area img{ max-width: 100%; }
+.user-area{ 
+    margin-top: -6px; 
+    padding-bottom: 7px;
+}
 .user-area .user-icon i{
     width: 32px;
     height: 32px;
 }
 .user-icon, .user-name,
-.user-icon li, .user-name li{ display: inline; }
+.user-icon li, .user-name li{ 
+    display: inline; 
+    font-size: 14px;
+    color: #333;
+}
+
 .user-icon li:not(:first-child) { margin-left: -15px; }
 .desc-area {       
     margin-top: 13px;
@@ -354,49 +397,139 @@ body{
 }
 
 /* live status */
+.live-info{
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+}
+.live-info2{
+    position: absolute;
+    bottom: 10px;
+    right: 10px; 
+}
 .ic-live{
-    position: absolute;    
     display: inline-block;
     opacity: 0.8;
     padding:5px 8px 4px;
     border-radius: 2px;
-    font-family: 'Roboto','Noto Sans KR', Arial, Helvetica, sans-serif;;
+    font-family: 'Roboto','Noto Sans KR', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 13px;
-    color: #fff;
+    color: #fff; 
 }
 .ic-live em{ 
     font-weight: 500;
     padding-right: 5px;
 }
 .status-onair{ 
-    top: 10px;
-    left: 10px;
     background-color: #ff2a69; 
 }
 .status-living{ 
-    top: 10px;
-    left: 10px;
     background-color: #8a52ad; 
 }
 .status-view{
-    top: 10px;
-    left: 125px;
     background-color: #000;
     opacity: 0.6;
 }
 .status-stop{
-    top: 10px;
-    left: 10px;
     background-color: #000;
     opacity: 1;
 }
 .status-tag{
-    bottom: 160px;
-    right: 10px;
     background-color: #000;
     opacity: 0.6;
 }
+
+/* main 이벤트 */
+.img-area.bg{
+    height: 160px;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* 베스트채널 */
+.bestchannel ul{
+    min-width: 1500px;
+    overflow: hidden;
+}
+.bestchannel li{
+    float: left;
+    width: 144px;
+    margin-right: 40px;
+    text-align: center;
+}
+.bestchannel li:last-child{ margin-right: 0; }
+.channel_circle{
+    display:block;
+    width: 144px;
+    height: 144px;    
+    border-radius: 50%;
+    border: solid 1px #e2e2e2;
+    background-color: #fff; 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.channel_name{
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+.channel_official{
+    color: #8a52ad;
+    font-size: 14px;
+}
+.channel_official::after{
+    content: "브랜드 공식";
+}
+.channel_muse{
+    color: #ff2a69;
+    font-size: 14px;
+}
+.channel_muse::after{
+    content: " 뮤즈";
+}
+
+
+/* 오늘의 특가 */
+.img-area.spec{
+    width: 240px;
+}
+.desc-area.spec{       
+    margin-top: 8px;
+    margin-bottom: 18px;  
+    padding-right: 24px; 
+    font-size: 16px;
+}
+.price-area.spec{    
+    font-size: 18px;    
+    color: #000;
+}
+.price-area.spec del{
+    display: block;
+    padding:0 0 8px 0;
+}
+.price-area em{
+    padding-left: 8px;
+    font-size: 16px;
+    color: #ff2a69;
+}
+
+/* 인기영상 */
+.view-area{
+    font-family: 'Roboto','Noto Sans KR', Arial, Helvetica, sans-serif;
+    font-size: 14px;;
+    color: #666;
+}
+.img-area.brand{
+    width: 280px;
+}
+
+
+
+
 
 /* icon*/
 .ic-new-circle{
@@ -408,14 +541,16 @@ body{
 }
 .img-circle{
     position: relative;
-    top:6px;
+    top:8px;
     display: inline-block;    
     overflow: hidden;
     border-radius: 50%;
+    border: 1px solid #e2e2e2; 
     background-color: #fff;
-    border: 1px solid #e2e2e2;    
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-.brand-clio{
+/* .brand-clio{
     background: url(../img/brand/logo-clio.png) no-repeat; 
     background-size: contain;
 }
@@ -444,6 +579,6 @@ body{
     background-size: contain;
 }
 .brand-age20{
-    background: url(../img/brand/logo-age20.png) no-repeat;     
+    background: url(../img/brand/logo-logo-age20.png) no-repeat;     
     background-size: contain;
-}
+} */

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>shall we shop</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700|Roboto:400,500&display=swap&subset=korean"/>    
     <link href="assets/css/xeicon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700|Roboto:400,500&display=swap&subset=korean"/>    
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
@@ -52,17 +52,16 @@
                 <li class="my-channel"><i class="xi-heart-o"></i>MY 채널</li>
             </ul>
             <ul class="nav-mychannel">
-                <li><a href="/"><i class="img-circle brand-clio"></i>클리오 코스메틱</a><span class="ic-new-circle"></span></li>
-                <li><a href="/"><i class="img-circle brand-goodal"></i>구달</a><span class="ic-new-circle"></span></li>
-                <li><a href="/"><i class="img-circle brand-hankook"></i>한국 화장품</a></li>
-                <li><a href="/"><i class="img-circle brand-secretnature"></i>시크릿 네이처</a></li>
-                <li><a href="/"><i class="img-circle brand-lf"></i>LF</a></li>
-                <li><a href="/"><i class="img-circle brand-jill"></i>질스튜어트</a></li>
-                <li><a href="/"><i class="img-circle brand-akb"></i>AK Beauty</a></li>
-                <li><a href="/"><i class="img-circle brand-age20"></i>AGE 20's</a></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-clio.png');"></i>클리오 코스메틱</a><span class="ic-new-circle"></span></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-goodal.png');"></i>구달</a><span class="ic-new-circle"></span></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-hankook.png');"></i>한국 화장품</a></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-secreatnature.png');"></i>시크릿 네이처</a></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-lf.png');"></i>LF</a></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-jill.png');"></i>질스튜어트</a></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-akb.png');"></i>AK Beauty</a></li>
+                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-age20.png');"></i>AGE 20's</a></li>
                 <li class="more-channel"><a href="/"><i class="xi-angle-down-min"></i>8개 더보기</a></li>
-            </ul>                
-           
+            </ul>
         </div>
 
         <!-- content -->
@@ -75,35 +74,54 @@
                     <h3 class="section-title"><span>LIVE</span> 오늘의 방송 보기<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
                    <!-- Swiper -->                  
-                    <div class="slide swiper-container">
+                    <div class="swiper-container" id="live-today">
                         <ul class="swiper-wrapper">
+                           
+                            <!-- 라이브 중인 영상 -->
                             <li class="swiper-slide">
-                                <dl>
-                                    <dt class="img-area">
-                                        <img src="assets/img/1.PNG" alt="클리오추천템">
-                                    </dt>
-                                    <dd class="user-area">
-                                        <ul class="user-icon">
-                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
-                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
-                                        </ul>
-                                        <ul class="user-name">
-                                            <li>리아</li>
-                                            <li>질스튜어트</li>
-                                        </ul>
-                                    </dd>
-                                    <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
-                                    <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>
-                                </dl>                               
-                                <span class="ic-live status-onair"><em>라이브</em> AM 2:30</span>
-                                <span class="ic-live status-view"><em>시청</em> 0</span>
-                                <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
-                               
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href=""><img src="assets/img/1.jpg" alt="클리오추천템"></a>
+                                            <span class="circle-box"><i class="xi-play"></i></span>
+                                            <div class="live-info">
+                                                <span class="ic-live status-onair"><em>라이브</em> AM 2:30</span>
+                                                <span class="ic-live status-view"><em>시청</em> 1.4천</span>
+                                            </div> 
+                                            <div class="live-info2">
+                                                <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
+                                            </div>
+                                        </dt>
+                                        <dd class="user-area">
+                                            <ul class="user-icon">
+                                                <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
+                                                <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
+                                            </ul>
+                                            <ul class="user-name">
+                                                <li>리아</li>
+                                                <li><i class="xi-close-min"></i>질스튜어트</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
+                                        <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>
+                                    </dl>    
+                                    <!-- 방송화면상태-->
+
+                                                                
                             </li>
+
+                            <!-- 종료된 영상 -->
                             <li class="swiper-slide">
                                 <dl>
                                     <dt class="img-area">
-                                        <img src="assets/img/1.PNG" alt="클리오추천템">
+                                        <img src="assets/img/1.jpg" alt="클리오추천템">
+                                        <span class="circle-box"><i class="xi-play"></i></span>
+                                        <div class="live-info">
+                                            <span class="ic-live status-stop"><em>종료</em> PM 00:00</span>
+                                            <span class="ic-live status-view"><em>시청</em> 0</span>
+                                        </div> 
+                                        <div class="live-info2">
+                                            <span class="ic-live status-tag"><i class="xi-tags"></i> 110</span>
+                                        </div>
                                     </dt>
                                     <dd class="user-area">
                                         <ul class="user-icon">
@@ -112,20 +130,27 @@
                                         </ul>
                                         <ul class="user-name">
                                             <li>리아</li>
-                                            <li>질스튜어트</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">[시크릿네이처] 각질파티 이제그만! 프롬제주필링젤로 자극없이 각질관리하자! 각질관리하자!각질관리하자! 각질파티 이제그만! 프롬제주필링젤로</dd>
                                     <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>
                                 </dl>
-                                <span class="ic-live status-stop"><em>종료</em> PM 00:00</span>
-                                <span class="ic-live status-view"><em>시청</em> 0</span>
-                                <span class="ic-live status-tag"><i class="xi-tags"></i> 110</span>
+                          
                             </li>
+
+                            <!-- 예정인 영상 -->
                             <li class="swiper-slide">
                                 <dl>
                                     <dt class="img-area">
-                                        <img src="assets/img/1.PNG" alt="클리오추천템">
+                                        <img src="assets/img/1.jpg" alt="클리오추천템">
+                                        <span class="circle-box"><i class="xi-bell"></i></span>
+                                        <div class="live-info">
+                                            <span class="ic-live status-living"><em>오늘</em> PM 11:30</span>
+                                        </div> 
+                                        <div class="live-info2">
+                                            <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
+                                        </div>
                                     </dt>
                                     <dd class="user-area">
                                         <ul class="user-icon">
@@ -134,19 +159,292 @@
                                         </ul>
                                         <ul class="user-name">
                                             <li>리아</li>
-                                            <li>질스튜어트</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
                                     <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>
                                 </dl>
-                                <span class="ic-live status-living"><em>오늘</em> PM 11:30</span>
-                                <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
+                               
                             </li>
+
+
+                            <!-- 예정인 방송(날짜로 표시) -->
                             <li class="swiper-slide">
                                 <dl>
                                     <dt class="img-area">
-                                        <img src="assets/img/1.PNG" alt="클리오추천템">
+                                        <img src="assets/img/1.jpg" alt="클리오추천템">
+                                        <span class="circle-box"><i class="xi-bell"></i></span>
+                                        <div class="live-info">
+                                            <span class="ic-live status-living"><em>12/26</em> PM 11:30</span>
+                                        </div> 
+                                        <div class="live-info2">
+                                            <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
+                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
+                                    <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>                                    
+                                </dl>
+                            </li>  
+                            
+                            <!-- 종료된 영상(종료시간 24시간 경과 후, 1일, 1주, 1개월전표시) -->
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area">
+                                        <img src="assets/img/1.jpg" alt="클리오추천템">
+                                        <span class="circle-box"><i class="xi-play"></i></span>
+                                        <div class="live-info">
+                                            <span class="ic-live status-stop"><em>종료</em> 1일 전</span>
+                                            <span class="ic-live status-view"><em>시청</em> 0</span>
+                                        </div> 
+                                        <div class="live-info2">
+                                            <span class="ic-live status-tag"><i class="xi-tags"></i> 110</span>
+                                        </div>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
+                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">[시크릿네이처] 각질파티 이제그만! 프롬제주필링젤로 자극없이 각질관리하자! 각질관리하자!각질관리하자! 각질파티 이제그만! 프롬제주필링젤로</dd>
+                                    <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>
+                                </dl>
+                                <!-- 방송화면상태-->
+                            </li>
+                        </ul>                                              
+                    </div>
+                     <!-- Add Arrows -->
+                    <div class="swiper-button-next btn-next-live"></div>
+                    <div class="swiper-button-prev btn-prev-live"></div>
+                </section>               
+
+                <section class="today-event">
+                    <h3 class="section-title">이벤트<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
+
+                   <!-- Swiper -->                  
+                    <div class="swiper-container" id="event-area">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area bg" style="background-image: url('assets/img/2.jpg');">
+                                        <!-- <img src="assets/img/default.jpg" alt="기본이미지"> -->
+                                    </dt>
+                                    <dd class="user-area">                                       
+                                        <ul class="user-name">                                                                                       
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">LOVE MY SELF - 강승현의 PICK</dd>
+                                   
+                                </dl>                                  
+                            </li> 
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area bg" style="background-image: url('assets/img/2.jpg');"></dt>
+                                    <dd class="user-area">                                       
+                                        <ul class="user-name">                                                                                       
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">시크릿네이처 원더풀데이 3탄, 대용량 올인원 클렌징 솝 수선화 클렌징 리퀴드 솝 1,000개 증정! 시크릿네이처 원더풀</dd>
+                                   
+                                </dl>                                  
+                            </li> 
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area bg" style="background-image: url('assets/img/2.jpg');"></dt>
+                                    <dd class="user-area">                                       
+                                        <ul class="user-name">                                                                                       
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">꿀잠잔듯 핑크 광채쿠션, "꿀 잠 잔 듯 생기 넘치는" 셀피를 SNS에 인증하세요</dd>
+                                </dl>                                  
+                            </li> 
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area bg" style="background-image: url('assets/img/2.jpg');"></dt>
+                                    <dd class="user-area">                                       
+                                        <ul class="user-name">                                                                                       
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">시크릿네이처 원더풀데이 3탄, 대용량 올인원 클렌징 솝 수선화 클렌징 리퀴드 솝 1,000개 증정! 시크릿네이처 원더풀</dd>
+                                   
+                                </dl>                                  
+                            </li>                            
+                        </ul>                                              
+                    </div>
+                     <!-- Add Arrows -->
+                    <div class="swiper-button-next btn-next-event"></div>
+                    <div class="swiper-button-prev btn-prev-event"></div>
+
+                </section>
+
+                <section class="pick"></section>
+                
+                <!-- 오늘의 특가상품 -->
+                <section class="today-special">
+                    <h3 class="section-title">오늘의 특가 상품<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
+
+                    <!-- Swiper -->                  
+                    <div class="swiper-container" id="today-spec">
+                        <ul class="swiper-wrapper">                          
+                          
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>   
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션 [클리오] 킬커버 광채쿠션 기획세트</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area spec">
+                                        <a href=""><img src="assets/img/spec_price_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                    </dt>
+                                    <dd class="user-area">                                           
+                                        <ul class="user-name">
+                                            <li>클리오</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area spec multi_ellipsis">[클리오] 킬커버 광채쿠션</dd>
+                                    <dd class="price-area spec">
+                                        <del>218,000원</del>
+                                        54,150원 <em> 20%</em>
+                                    </dd>
+                                </dl>                       
+                            </li>
+                        </ul>                                              
+                    </div>
+                     <!-- Add Arrows -->
+                    <div class="swiper-button-next btn-next-spec-price"></div>
+                    <div class="swiper-button-prev btn-prev-spec-price"></div>
+                </section>
+
+                <!-- 인기영상 -->
+                <section class="popular">
+                    <h3 class="section-title">인기 영상<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
+
+                   <!-- Swiper -->                  
+                    <div class="swiper-container" id="today-pop">
+                        <ul class="swiper-wrapper">
+
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area">
+                                        <a href="/"><img src="assets/img/pop_01.jpg" alt="클리오추천템"></a>
+                                        <span class="circle-box"><i class="xi-play"></i></span>                                            
                                     </dt>
                                     <dd class="user-area">
                                         <ul class="user-icon">
@@ -158,26 +456,215 @@
                                             <li>질스튜어트</li>
                                         </ul>
                                     </dd>
-                                    <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
-                                    <dd class="price-area">154,150원<del>218,000원</del><em>20%</em></dd>                                    
-                                </dl>
-                                <span class="ic-live status-living"><em>12/26</em> PM 11:30</span>
-                                <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
-                            </li>                           
+                                    <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
+                                    <dd class="view-area">조회수 4.1만</dd>
+                                </dl>                                      
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area">
+                                        <a href="/"><img src="assets/img/pop_01.jpg" alt="클리오추천템"></a>
+                                        <span class="circle-box"><i class="xi-play"></i></span>                                            
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
+                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰PERIPERA - INK POCKET SHADOW</dd>
+                                    <dd class="view-area">조회수 4.1만</dd>
+                                </dl>                                      
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area">
+                                        <a href="/"><img src="assets/img/pop_01.jpg" alt="클리오추천템"></a>
+                                        <span class="circle-box"><i class="xi-play"></i></span>                                            
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
+                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
+                                    <dd class="view-area">조회수 4.1만</dd>
+                                </dl>                                      
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area">
+                                        <a href="/"><img src="assets/img/pop_01.jpg" alt="클리오추천템"></a>
+                                        <span class="circle-box"><i class="xi-play"></i></span>                                            
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>
+                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                            <li>질스튜어트</li>
+                                        </ul>
+                                    </dd>
+                                    <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
+                                    <dd class="view-area">조회수 4.1만</dd>
+                                </dl>                                      
+                            </li>
                         </ul>                                              
                     </div>
                      <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next btn-next-pop"></div>
+                    <div class="swiper-button-prev btn-prev-pop"></div>
                 </section>
-                
 
-                <section class="today-event"></section>
-                <section class="pick"></section>
-                <section class="today-special"></section>
-                <section class="popular"></section>
-                <section class="bestchannel"></section>
-                <section class="itbaran"></section>
+                <!-- 베스트채널 -->
+                <section class="bestchannel">
+                    <h3 class="section-title">베스트 채널<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
+
+                    <ul>                           
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-clio.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">클리오 코스메틱클리오 코스메틱클리오 코스메틱클리오 코스메틱</dd>
+                            <dd class="channel_official"><i class="xi-crown"></i></dd>
+                        </li>  
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-clio.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">클리오</dd>
+                            <dd class="channel_official"><i class="xi-crown"></i></dd>
+                        </li>
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-lafuma.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">나은</dd>
+                            <dd class="channel_muse"><i class="xi-crown"></i>헤지스</dd>
+                        </li>
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-jill.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">우주선</dd>
+                            <dd class="channel_muse"><i class="xi-crown"></i>클리오</dd>
+                        </li>
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-ilcorso.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">시크릿 네이쳐</dd>
+                            <dd class="channel_official"><i class="xi-crown"></i></dd>
+                        </li>
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-age20.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">클리오 코스메틱클리오 코스메틱클리오 코스메틱클리오 코스메틱</dd>
+                            <dd class="channel_muse"><i class="xi-crown"></i>헤라헤라</dd>
+                        </li>
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-lf.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">TNGT</dd>
+                            <dd class="channel_official"><i class="xi-crown"></i></dd>
+                        </li>                        
+                        <li>
+                            <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-peripera.png);"></dt>
+                            <dd class="channel_name  multi_ellipsis">헤이쥬</dd>
+                            <dd class="channel_official"><i class="xi-crown"></i></dd>
+                        </li>
+                    </ul>                                              
+                   
+                </section>
+
+                <!-- itbrand -->
+                <section class="itbaran">
+                    <h3 class="section-title">It Brand<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
+
+                   <!-- Swiper -->                  
+                    <div class="swiper-container" id="it-brand">
+                        <ul class="swiper-wrapper">                           
+                         
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area brand">
+                                        <a href=""><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                        </ul>
+                                    </dd>                                       
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area brand">
+                                        <a href=""><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                        </ul>
+                                    </dd>                                       
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area brand">
+                                        <a href=""><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                        </ul>
+                                    </dd>                                       
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area brand">
+                                        <a href=""><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                        </ul>
+                                    </dd>                                       
+                                </dl>                       
+                            </li>
+                            <li class="swiper-slide">
+                                <dl>
+                                    <dt class="img-area brand">
+                                        <a href=""><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
+                                    </dt>
+                                    <dd class="user-area">
+                                        <ul class="user-icon">
+                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
+                                        </ul>
+                                        <ul class="user-name">
+                                            <li>리아</li>
+                                        </ul>
+                                    </dd>                                       
+                                </dl>                       
+                            </li>
+                        </ul>                                              
+                    </div>
+                     <!-- Add Arrows -->
+                    <div class="swiper-button-next btn-next-brand"></div>
+                    <div class="swiper-button-prev btn-prev-brand"></div>
+                </section>
             </div>
 
             <!-- 푸터 -->
@@ -203,20 +690,6 @@
     </div>
 
     <script src="assets/js/swiper.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 3,
-          spaceBetween: 16,
-          slidesPerGroup: 3,
-          loop: false,
-          loopFillGroupWithBlank: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      </script>
-    
+    <script src="assets/js/sws.js"></script>
 </body>
-
 </html>
