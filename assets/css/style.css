@@ -33,7 +33,7 @@ html {
     font-family: sans-serif;
     line-height: 1;
     -webkit-text-size-adjust: 100%;
-  }
+ }
 ol, ul { list-style: none; }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
@@ -89,6 +89,7 @@ body{
 .content{
     float: right;
     width: calc(100% - 240px);
+    margin: 0 auto;
     border-left: 1px solid #dcdcdc;
 }
 
@@ -167,7 +168,12 @@ body{
     float: left;
     padding-left: 20px;
 }
-.nav-menu >li i { font-size: 24px; }
+.nav-menu >li i {
+    width: 32px;
+    height: 32px;
+    font-size: 24px; 
+}
+.nav-menu >li i.img-circle{ top: -4px; }
 .nav-menu >li a:hover i{color: #111;}
 
 
@@ -212,7 +218,6 @@ body{
     margin: 16px 0 24px;
     padding-top: 16px;
 }
-
 .sidebar .nav-mychannel li{ padding-left: 30px; }
 .sidebar .nav-mychannel > li i{
     width: 24px;
@@ -229,6 +234,23 @@ body{
 }
 .sidebar .nav .my-channel:hover,
 .sidebar .nav-mychannel .more-channel{ background-color: transparent; }
+
+#menu_toggle{
+    position: fixed;
+    bottom: 50px;
+    left: 20px;    
+    display: block; 
+    cursor: pointer;
+}
+#menu_toggle>i{ font-size: 18px; }
+.sidebar-sm .content{ 
+    width: calc(100% - 64px);
+}
+.sidebar-sm .sidebar { width: 64px; }
+.sidebar-sm .sidebar .nav em, 
+.sidebar-sm .sidebar .nav-mychannel em,
+.sidebar-sm .sidebar .nav-mychannel .more-channel{ display: none; }
+.sidebar-sm .sidebar .nav-mychannel li{ padding-left: 20px; }
 
 /* footer */
 .footer{    
@@ -309,6 +331,10 @@ body{
     color: #999;
     outline: none;
 }
+.swiper-container{
+    width: 1500px;
+    max-width: 100%;
+}
 .swiper-slide{   
     width: 496px;
     background: #fff;
@@ -316,7 +342,7 @@ body{
 .img-area{
     position: relative;
     margin-bottom: 16px;
-    background-color: #e2e2e2;
+    background-color: #fff;
     border-radius: 4px;
     border: solid 1px #e2e2e2;
 }
@@ -421,12 +447,8 @@ body{
     font-weight: 500;
     padding-right: 5px;
 }
-.status-onair{ 
-    background-color: #ff2a69; 
-}
-.status-living{ 
-    background-color: #8a52ad; 
-}
+.status-onair{ background-color: #ff2a69; }
+.status-living{ background-color: #8a52ad; }
 .status-view{
     background-color: #000;
     opacity: 0.6;
@@ -481,15 +503,67 @@ body{
     color: #8a52ad;
     font-size: 14px;
 }
-.channel_official::after{
-    content: "브랜드 공식";
-}
+.channel_official::after{ content: "브랜드 공식"; }
 .channel_muse{
     color: #ff2a69;
     font-size: 14px;
 }
-.channel_muse::after{
-    content: " 뮤즈";
+.channel_muse::after{ content: " 뮤즈"; }
+
+/* swspick */
+.pick-menu{
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    font-size: 20px;
+    color: #eee;
+}
+.pick-menu li{
+    display: inline-block;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.pick-menu li a{
+    font-size: 20px;
+    color: #aaa;
+    font-weight: 400;
+}
+.pick-menu li a.active{
+    font-size: 20px;
+    color: #ff2a69;
+}
+.pick-wrap{ height: 396px; display: none;}
+.pick-wrap:target { display: block;}
+.pick-img, .pick-info{ float: left; }
+.pick-img{ width: 704px; text-align: center;}
+.pick-img img{ max-width: 704px; height: 396px; }
+.pick-img .circle-box{ opacity: 0.5; }
+.pick-img .circle-box i{
+    font-size: 45px;
+    color: #fff;
+}
+.pick-info{ 
+    width: calc(100% - 704px);
+    padding-left: 48px;
+}
+.pick-text{
+    margin-top: 16px;
+    margin-bottom: 46px;
+    font-size: 24px;
+    color: #111;
+    line-height: 32px;
+}
+.pick-prd{
+    min-width: 700px;
+    overflow: hidden;
+}
+.pick-prd li{ 
+    float: left; 
+    margin-right: 96px;
+}
+.pick-prd .img-area{
+    width: 128px;
+    height: 128px;
 }
 
 
@@ -550,7 +624,7 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
 }
-/* .brand-clio{
+.brand-clio{
     background: url(../img/brand/logo-clio.png) no-repeat; 
     background-size: contain;
 }
@@ -581,4 +655,4 @@ body{
 .brand-age20{
     background: url(../img/brand/logo-logo-age20.png) no-repeat;     
     background-size: contain;
-} */
+}

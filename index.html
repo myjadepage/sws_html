@@ -30,8 +30,8 @@
                 <li><a href="/"><i class="xi-videocam"></i><em class="text-hidden">라이브</em></a></li>
                 <li><a href="/"><i class="xi-cart"></i><em class="text-hidden">장바구니</em></a></li>
                 <li><a href="/"><i class="xi-bell"></i><em class="text-hidden">알림</em></a></li>
-                <li>
-                    <a href=""><i class="xi-profile"></i><em class="text-hidden">나의방송</em></a>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/default-avatar.png');"></i><em  class="text-hidden">my</em></a>                    
                     <ul class="dropdown">
                         <li></li>
                         <li></li>
@@ -40,28 +40,47 @@
             </ul>
         </nav>
     </header>
-    <div class="wrapper">
+    <div class="wrapper sidebar-lg">
         <!-- 메인네비 -->
         <div class="sidebar">
             <ul class="nav">
-                <li class="active"><a href="/"><i class="xi-calendar-list"></i>TODAY!</a></li></i>
-                <li><a href="/"><i class="xi-central-signal"></i>LIVE</a></li>
-                <li><a href="/"><i class="xi-bookmark-o"></i>BRAND</a></li>
-                <li><a href="/"><i class="xi-shop"></i>SHOP</a></li>
-                <li><a href="/"><i class="xi-star-o"></i>EVENT</a></li>                
-                <li class="my-channel"><i class="xi-heart-o"></i>MY 채널</li>
+                <li class="active"><a href="/"><i class="xi-calendar-list"></i><em>TODAY!</em></a></li></i>
+                <li><a href="/"><i class="xi-central-signal"></i><em>LIVE</em></a></li>
+                <li><a href="/"><i class="xi-bookmark-o"></i><em>BRAND</em></a></li>
+                <li><a href="/"><i class="xi-shop"></i><em>SHOP</em></a></li>
+                <li><a href="/"><i class="xi-star-o"></i><em>EVENT</em></a></li>                
+                <li class="my-channel"><i class="xi-heart-o"></i><em>MY 채널</em></li>
             </ul>
             <ul class="nav-mychannel">
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-clio.png');"></i>클리오 코스메틱</a><span class="ic-new-circle"></span></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-goodal.png');"></i>구달</a><span class="ic-new-circle"></span></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-hankook.png');"></i>한국 화장품</a></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-secreatnature.png');"></i>시크릿 네이처</a></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-lf.png');"></i>LF</a></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-jill.png');"></i>질스튜어트</a></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-akb.png');"></i>AK Beauty</a></li>
-                <li><a href="/"><i class="img-circle" style="background-image: url('assets/img/brand/logo-age20.png');"></i>AGE 20's</a></li>
-                <li class="more-channel"><a href="/"><i class="xi-angle-down-min"></i>8개 더보기</a></li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-clio.png');"></i><em>클리오 코스메틱</em></a>
+                    <span class="ic-new-circle"></span></li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-goodal.png');"></i><em>구달</em></a>
+                    <span class="ic-new-circle"></span></li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-hankook.png');"></i><em>한국 화장품</em></a>
+                </li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-secreatnature.png');"></i><em>시크릿 네이처</em></a>
+                </li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-lf.png');"></i><em>LF</em></a>
+                </li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-jill.png');"></i><em>질스튜어트</em></a>
+                </li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-akb.png');"></i><em>AK Beauty</em></a>
+                </li>
+                <li><a href="/">
+                    <i class="img-circle" style="background-image: url('assets/img/brand/logo-age20.png');"></i><em>AGE 20's</em></a>
+                </li>
+                <li class="more-channel"><a href="/">
+                    <i class="xi-angle-down-min"></i><em>8개 더보기</em></a>
+                </li>
             </ul>
+            <a id="menu_toggle"><i class="xi-long-arrow-left"></i></a>
         </div>
 
         <!-- content -->
@@ -70,6 +89,7 @@
             <div class="main">
                 <h2 class="title">TODAY!</h2>
 
+                <!-- @@오늘의 라이브방송 -->
                 <section class="today-live">
                     <h3 class="section-title"><span>LIVE</span> 오늘의 방송 보기<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
@@ -233,6 +253,7 @@
                     <div class="swiper-button-prev btn-prev-live"></div>
                 </section>               
 
+                <!-- @@이벤트 -->
                 <section class="today-event">
                     <h3 class="section-title">이벤트<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
@@ -285,7 +306,6 @@
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">시크릿네이처 원더풀데이 3탄, 대용량 올인원 클렌징 솝 수선화 클렌징 리퀴드 솝 1,000개 증정! 시크릿네이처 원더풀</dd>
-                                   
                                 </dl>                                  
                             </li>                            
                         </ul>                                              
@@ -293,12 +313,157 @@
                      <!-- Add Arrows -->
                     <div class="swiper-button-next btn-next-event"></div>
                     <div class="swiper-button-prev btn-prev-event"></div>
-
                 </section>
 
-                <section class="pick"></section>
+                <!-- @@sws pick -->
+                <section class="pick">
+                    <h3 class="section-title"><span>SWS</span> PICK
+                    <ul class="pick-menu">
+                        <li><a href="#pick-fashion" class="active">패션</a></li>|
+                        <li><a href="#pick-beauty">뷰티</a></li>|
+                        <li><a href="#pick-it">IT,가전</a></li>|
+                        <li><a href="#pick-food">식품</a></li>
+                    </ul>
+                    <a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
+
+                    <article class="pick-wrap" id="pick-fashion">
+                        <div class="img-area pick-img">
+                            <img src="assets/img/pick_fashion_01.jpg" alt="클리오추천템">
+                            <span class="circle-box"><i class="xi-play"></i></span>                           
+                            <div class="live-info2">
+                                <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
+                            </div>
+                        </div>
+                        <div class="pick-info">
+                            <div class="user-area">
+                                <ul class="user-icon">
+                                    <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>                                   
+                                </ul>
+                                <ul class="user-name">
+                                    <li>Shall We Shop</li>                                  
+                                </ul>
+                            </div>
+                            <p class="pick-text">
+                                추워지기전에 준비하자.<br>
+                                Skincare Routine Night ver. 스킨케어 루틴!!
+                            </p>
+                            <ul class="pick-prd">
+                                <li>
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href="/"><img src="assets/img/pick_beauty_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                        </dt>
+                                        <dd class="user-area">                                           
+                                            <ul class="user-name">
+                                                <li>클리오</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area spec">순 발효 앰플</dd>
+                                        <dd class="price-area spec">54,150원 <em> 20%</em></dd>
+                                    </dl>                       
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href="/"><img src="assets/img/pick_beauty_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                        </dt>
+                                        <dd class="user-area">                                           
+                                            <ul class="user-name">
+                                                <li>클리오</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area spec">순 발효 앰플</dd>
+                                        <dd class="price-area spec">54,150원 <em> 20%</em></dd>
+                                    </dl>                       
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href="/"><img src="assets/img/pick_beauty_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                        </dt>
+                                        <dd class="user-area">                                           
+                                            <ul class="user-name">
+                                                <li>클리오</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area spec">순 발효 앰플</dd>
+                                        <dd class="price-area spec">54,150원 <em> 20%</em></dd>
+                                    </dl>                       
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="pick-wrap" id="pick-beauty">
+                        <div class="img-area pick-img">
+                            <img src="assets/img/1.jpg" alt="클리오추천템">
+                            <span class="circle-box"><i class="xi-play"></i></span>                           
+                            <div class="live-info2">
+                                <span class="ic-live status-tag"><i class="xi-tags"></i> 10</span>
+                            </div>
+                        </div>
+                        <div class="pick-info">
+                            <div class="user-area">
+                                <ul class="user-icon">
+                                    <li><i class="img-circle brand-clio"></i><em class="text-hidden">리아</em></li>                                   
+                                </ul>
+                                <ul class="user-name">
+                                    <li>Shall We Shop</li>                                  
+                                </ul>
+                            </div>
+                            <p class="pick-text">
+                                추워지기전에 준비하자.<br>
+                                Skincare Routine Night ver. 스킨케어 루틴!!
+                            </p>
+                            <ul class="pick-prd">
+                                <li>
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href="/"><img src="assets/img/pick_beauty_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                        </dt>
+                                        <dd class="user-area">                                           
+                                            <ul class="user-name">
+                                                <li>클리오</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area spec">순 발효 앰플</dd>
+                                        <dd class="price-area spec">54,150원 <em> 20%</em></dd>
+                                    </dl>                       
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href="/"><img src="assets/img/pick_beauty_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                        </dt>
+                                        <dd class="user-area">                                           
+                                            <ul class="user-name">
+                                                <li>클리오</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area spec">순 발효 앰플</dd>
+                                        <dd class="price-area spec">54,150원 <em> 20%</em></dd>
+                                    </dl>                       
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt class="img-area">
+                                            <a href="/"><img src="assets/img/pick_beauty_01.jpg" alt="클리오오늘의특가"></a>                                                                            
+                                        </dt>
+                                        <dd class="user-area">                                           
+                                            <ul class="user-name">
+                                                <li>클리오</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="desc-area spec">순 발효 앰플</dd>
+                                        <dd class="price-area spec">54,150원 <em> 20%</em></dd>
+                                    </dl>                       
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </section>
                 
-                <!-- 오늘의 특가상품 -->
+                <!-- @@오늘의 특가상품 -->
                 <section class="today-special">
                     <h3 class="section-title">오늘의 특가 상품<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
@@ -432,7 +597,7 @@
                     <div class="swiper-button-prev btn-prev-spec-price"></div>
                 </section>
 
-                <!-- 인기영상 -->
+                <!-- @@인기영상 -->
                 <section class="popular">
                     <h3 class="section-title">인기 영상<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
@@ -527,7 +692,7 @@
                     <div class="swiper-button-prev btn-prev-pop"></div>
                 </section>
 
-                <!-- 베스트채널 -->
+                <!-- @@베스트채널 -->
                 <section class="bestchannel">
                     <h3 class="section-title">베스트 채널<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
@@ -576,7 +741,7 @@
                    
                 </section>
 
-                <!-- itbrand -->
+                <!-- @@itbrand -->
                 <section class="itbaran">
                     <h3 class="section-title">It Brand<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
@@ -690,6 +855,8 @@
     </div>
 
     <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
     <script src="assets/js/sws.js"></script>
+   
 </body>
 </html>

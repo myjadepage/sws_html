@@ -1,3 +1,8 @@
+// sidebar small or large
+$('#menu_toggle').on('click', function() {
+  $('.wrapper').toggleClass('sidebar-lg sidebar-sm')
+});
+
 // live 오늘의 방송보기
 var swiper = new Swiper('#live-today', {
     slidesPerView: 3,
