@@ -3,6 +3,16 @@ $('#menu_toggle').on('click', function() {
   $('.wrapper').toggleClass('sidebar-lg sidebar-sm')
 });
 
+// swspick tab menu
+$(".pick-menu a").click(function(e) {
+  e.preventDefault();
+  $(this).parent().addClass("active");
+  $(this).parent().siblings().removeClass("active");
+  var tab = $(this).attr("href");
+  $(".pick-con").not(tab).css("display", "none");
+  $(tab).fadeIn();
+});
+
 // live 오늘의 방송보기
 var swiper = new Swiper('#live-today', {
     slidesPerView: 3,
