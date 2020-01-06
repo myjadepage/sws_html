@@ -14,7 +14,7 @@ $(".pick-menu a").click(function(e) {
 });
 
 // live 오늘의 방송보기
-var swiper = new Swiper('#live-today', {
+var LIVETODAY = new Swiper('#live-today', {
     slidesPerView: 3,
     spaceBetween: 16,
     slidesPerGroup: 3,
@@ -27,7 +27,7 @@ var swiper = new Swiper('#live-today', {
   });
 
 //   이벤트
-  var swiper2 = new Swiper('#event-area', {
+  var EVENTAREA = new Swiper('#event-area', {
     slidesPerView: 3,
     spaceBetween: 16,
     slidesPerGroup: 3,
@@ -40,7 +40,7 @@ var swiper = new Swiper('#live-today', {
   }); 
 
   // 오늘의 특가상품
-  var swiper3 = new Swiper('#today-spec', {
+  var TODAYSPEC = new Swiper('#today-spec', {
     slidesPerView: 6,
     spaceBetween: 10, 
     slidesPerGroup: 6,
@@ -53,7 +53,7 @@ var swiper = new Swiper('#live-today', {
   }); 
 
   // 인기영상
-  var swiper4 = new Swiper('#today-pop', {
+  var TODAYPOP = new Swiper('#today-pop', {
     slidesPerView: 3,
     spaceBetween: 16,
     slidesPerGroup: 3,
@@ -66,7 +66,7 @@ var swiper = new Swiper('#live-today', {
   });
 
   // itbrand
-  var swiper5 = new Swiper('#it-brand', {
+  var ITBRAND = new Swiper('#it-brand', {
     slidesPerView: 5,
     spaceBetween: 16,
     slidesPerGroup: 5,

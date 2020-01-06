@@ -261,7 +261,7 @@ body{
     padding: 17px 80px;
     font-size: 36px;
     color: #111;
-    font-weight: 700;    
+    font-weight: 600;    
     border-bottom: 1px solid #dcdcdc;
 }
 .main section{
@@ -301,16 +301,12 @@ body{
     width: 1500px;
     max-width: 100%;
 }
-.swiper-slide{   
-    width: 496px;
-    background: #fff;
-}
+.swiper-slide{ width: 496px; }
+#today-spec .swiper-slide{ width: 240px; }
 .img-area{
     position: relative;
     margin-bottom: 16px;
-    background-color: #fff;
-    border-radius: 4px;
-    border: solid 1px #e2e2e2;
+    background-color: #fff;    
 }
 .img-area .circle-box{
     display: block;
@@ -333,7 +329,6 @@ body{
     -webkit-transition: all .2s ease-out 0s;
 }
 .img-area:hover .circle-box{
-    display: block;
     cursor: pointer;
     opacity: 0.5;
 }
@@ -342,11 +337,14 @@ body{
     color: #fff;
 }
 .img-area:active .circle-box{
-    display: block;
     cursor: pointer;
     opacity: 0.3;
 }
-.img-area img{ max-width: 100%; }
+.img-area img{ 
+    max-width: 100%; 
+    border-radius: 4px;
+    border: solid 1px #e2e2e2;
+}
 .user-area{ 
     margin-top: -6px; 
     padding-bottom: 7px;
@@ -389,17 +387,17 @@ body{
 }
 
 /* live status */
-.live-info{
+.live-info-top{
     position: absolute;
     top: 10px;
     left: 10px; 
 }
-.live-info2{
+.live-info-bottom{
     position: absolute;
     bottom: 10px;
     right: 10px; 
 }
-.ic-live{
+.ic-live-wrap{
     display: inline-block;
     opacity: 0.8;
     padding:5px 8px 4px;
@@ -409,7 +407,7 @@ body{
     font-size: 13px;
     color: #fff; 
 }
-.ic-live em{ 
+.ic-live-wrap em{ 
     font-weight: 500;
     padding-right: 5px;
 }
@@ -436,45 +434,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
-/* 베스트채널 */
-.bestchannel ul{
-    min-width: 1500px;
-    overflow: hidden;
-}
-.bestchannel li{
-    float: left;
-    width: 144px;
-    margin-right: 40px;
-    text-align: center;
-}
-.bestchannel li:last-child{ margin-right: 0; }
-.channel_circle{
-    display:block;
-    width: 144px;
-    height: 144px;    
-    border-radius: 50%;
-    border: solid 1px #e2e2e2;
-    background-color: #fff; 
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.channel_name{
-    margin-top: 16px;
-    margin-bottom: 4px;
-}
-.channel_official{
-    color: #8a52ad;
-    font-size: 14px;
-}
-.channel_official::after{ content: "브랜드 공식"; }
-.channel_muse{
-    color: #ff2a69;
-    font-size: 14px;
-}
-.channel_muse::after{ content: " 뮤즈"; }
 
 /* swspick */
 .pick-menu{
@@ -527,7 +486,7 @@ body{
     line-height: 32px;
 }
 .pick-prd{
-    min-width: 700px;
+    min-width: 704px;
     overflow: hidden;
 }
 .pick-prd li{ 
@@ -564,6 +523,8 @@ body{
     color: #ff2a69;
 }
 
+
+
 /* 인기영상 */
 .view-area{
     font-family: 'Roboto','Noto Sans KR', Arial, Helvetica, sans-serif;
@@ -574,7 +535,43 @@ body{
     width: 280px;
 }
 
-
+/* 베스트채널 */
+.bestchannel ul{
+    min-width: 1500px;
+    overflow: hidden;
+}
+.bestchannel li{
+    float: left;
+    width: 144px;
+    margin-right: 40px;
+    text-align: center;
+}
+.bestchannel li:last-child{ margin-right: 0; }
+.channel_circle{
+    display:block;
+    width: 144px;
+    height: 144px;    
+    border-radius: 50%;
+    border: solid 1px #e2e2e2;
+    background-color: #fff; 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.channel_name{
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+.channel_official{
+    color: #8a52ad;
+    font-size: 14px;
+}
+.channel_official::after{ content: "브랜드 공식"; }
+.channel_muse{
+    color: #ff2a69;
+    font-size: 14px;
+}
+.channel_muse::after{ content: " 뮤즈"; }
 
 /* footer */
 .footer{    
