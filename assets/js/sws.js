@@ -78,3 +78,16 @@ var LIVETODAY = new Swiper('#live-today', {
     },
   }); 
 
+  var BRANDCHANNEL = new Swiper('#brand-channel',{
+    slidesPerView: 8,
+    spaceBetween: 10, 
+    slidesPerGroup: 8,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.btn-next-brand-channel',
+      prevEl: '.btn-prev-brand-channel',
+    },
+
+  });
+
