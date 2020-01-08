@@ -91,3 +91,44 @@ var LIVETODAY = new Swiper('#live-today', {
 
   });
 
+  //브랜드포맷01
+  var BRANDFORMAT01 = new Swiper('#brand-format-01',{
+    slidesPerView: 4,
+    spaceBetween: 10, 
+    slidesPerGroup: 4,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.btn-next-brand-format-01',
+      prevEl: '.btn-prev-brand-format-01',
+    },
+
+  });
+  
+   //브랜드포맷02
+   var BRANDFORMAT02 = new Swiper('#brand-format-02',{
+    slidesPerView: 4,
+    spaceBetween: 10, 
+    slidesPerGroup: 4,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.btn-next-brand-format-02',
+      prevEl: '.btn-prev-brand-format-02',
+    },
+  });
+
+     //브랜드포맷03
+     var BRANDFORMAT03 = new Swiper('#brand-format-03',{
+      slidesPerView: 6,
+      spaceBetween: 10, 
+      slidesPerGroup: 6,
+      loop: false,
+      loopFillGroupWithBlank: true,
+      navigation: {
+        nextEl: '.btn-next-brand-format-03',
+        prevEl: '.btn-prev-brand-format-03',
+      },
+    });
+
+ 

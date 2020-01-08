@@ -242,3 +242,106 @@ body {
         .nav-mychannel li{ padding-left: 20px; }
     }
 } 
+
+
+/*
+ searchbar animation
+*/
+.search-bar-ani{
+    position: relative;
+    .search {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 170px;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border-radius: 50%;
+        transition: all 1s;
+        z-index: 4;        
+        &:hover {
+          cursor: pointer;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          margin: auto;
+          top: 22px;
+          right: 0;
+          bottom: 0;
+          left: 22px;
+          width: 12px;
+          height: 2px;
+          background: #111;
+          transform: rotate(45deg);
+          transition: all .5s;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          margin: auto;
+          top: -5px;
+          right: 0;
+          bottom: 0;
+          left: -5px;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          border: 2px solid #111;
+          transition: all .5s;
+        }
+      }
+      input {       
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 170px;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        border: none;        
+        color: #111;       
+        padding: 0 80px 0 20px;
+        border-radius: 30px;        
+        transition: all 1s;
+        opacity: 0;
+        z-index: 5;
+        letter-spacing: 0.1em;
+        background-color: #ffe3e8;
+        &:hover { cursor: pointer; }
+        &:focus {
+          width: 300px;
+          opacity: 1;
+          cursor: text;
+        }
+        &:focus ~ .search {
+          right: 170px;
+          background: transparent;
+          z-index: 6;
+          &::before {
+            top: 0;
+            left: 0;
+            width: 25px;
+          }
+          &::after {
+            top: 0;
+            left: 0;
+            width: 25px;
+            height: 2px;
+            border: none;
+            background: #666;
+            border-radius: 0%;
+            transform: rotate(-45deg);
+          }
+        }
+        &::placeholder {
+          color: #111;
+          opacity: 0.5;
+          font-weight: normal;
+        }
+      }  
+
+}

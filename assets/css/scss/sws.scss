@@ -30,9 +30,12 @@
             font-size: $space-width-small * 2;
             font-weight: $font-weight-semi;
             color: $font-color-base;
-        }
+            &.barnd-format{
+                font-size:24px;
+            }
+        }        
         .section-title span{ color: $main-color; }
-    }
+        }
     .section-more{ 
         float: right;
         font-size: $font-size-large; 
@@ -233,7 +236,7 @@ section li{
         }
         .pick-prd{
             position: absolute;
-            bottom: 0;
+            bottom: 2px;
             min-width: $width;
             overflow: hidden;
             li{ 
@@ -246,12 +249,12 @@ section li{
                 }
                 &.topic {
                     margin-right:$space-width-small;  
+                    height: 180px;
                     dd{
                         position: absolute;
                         bottom: 0;   
-                        width: 100%;
-                        height: $space-width-base *2;              
-                        @include black-bar();
+                        width: 100%;                                   
+                        @include black-bar( $space-width-base *2, 0.7);
                     }                  
                 }
                 .topic-info {
@@ -312,39 +315,39 @@ section li{
 
 // 베스트채널
 .bestchannel {
-    ul{
+    .brand-logo-list {
         min-width: $section-min-width;
         overflow: hidden;
-    }
-    li{
-        float: left;
-        width: 144px;
-        margin-right: 40px;
-        text-align: center;
-        
-        &:last-child{ margin-right: 0; }
 
-        .channel_circle{  
-            @include img-circle(null, 144px);
+        li{
+            float: left;
+            width: 144px;
+            margin-right: 40px;
+            text-align: center;
+            
+            &:last-child{ margin-right: 0; }
+    
+            .channel_circle{  
+                @include img-circle(null, 144px);
+            }
+               
+            .channel_name{
+                margin-top: $space-width-small;
+                margin-bottom: 4px;
+            }
+            .channel_official{
+                color: $sub-color;
+                font-size: $font-size-base;
+    
+                &::after{ content: "브랜드 공식"; }
+            }
+            .channel_muse{
+                color: #ff2a69;
+                font-size: 14px;
+    
+                &::after{ content: " 뮤즈"; }
+            }
         }
-           
-        .channel_name{
-            margin-top: $space-width-small;
-            margin-bottom: 4px;
-        }
-        .channel_official{
-            color: $sub-color;
-            font-size: $font-size-base;
-
-            &::after{ content: "브랜드 공식"; }
-        }
-        .channel_muse{
-            color: #ff2a69;
-            font-size: 14px;
-
-            &::after{ content: " 뮤즈"; }
-        }
-
     }
 }
 
@@ -524,8 +527,7 @@ section li{
     overflow: hidden;
 
     .black-bar{
-        @include black-bar();
-        opacity: 0.6;
+        @include black-bar(100%, 0.6);
     }
 
     .full-brand-info{
