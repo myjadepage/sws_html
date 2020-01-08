@@ -1,6 +1,7 @@
 // sidebar small or large
 $('#menu_toggle').on('click', function() {
-  $('.wrapper').toggleClass('sidebar-lg sidebar-sm')
+  $('.wrapper').toggleClass('sidebar-lg sidebar-sm');
+  $(this).find('i').toggleClass('xi-hamburger-back xi-hamburger-out');
 });
 
 // swspick tab menu

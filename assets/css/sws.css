@@ -372,7 +372,7 @@ body {
 }
 
 #menu_toggle i {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .sidebar-sm .content {
@@ -381,6 +381,8 @@ body {
 
 .sidebar-sm .sidebar {
   width: 60px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 .sidebar-sm .sidebar .nav em, .sidebar-sm .sidebar .nav-mychannel em, .sidebar-sm .sidebar .nav-mychannel .more-channel {
@@ -389,6 +391,11 @@ body {
 
 .sidebar-sm .sidebar .nav-mychannel li {
   padding-left: 20px;
+}
+
+.sidebar-sm .sidebar .nav-mychannel li .ic-new-circle {
+  top: 12px;
+  right: 10px;
 }
 
 /*
@@ -506,25 +513,25 @@ body {
 
 .search-bar-ani input::-webkit-input-placeholder {
   color: #111;
-  opacity: 0.5;
+  opacity: 0.7;
   font-weight: normal;
 }
 
 .search-bar-ani input:-ms-input-placeholder {
   color: #111;
-  opacity: 0.5;
+  opacity: 0.7;
   font-weight: normal;
 }
 
 .search-bar-ani input::-ms-input-placeholder {
   color: #111;
-  opacity: 0.5;
+  opacity: 0.7;
   font-weight: normal;
 }
 
 .search-bar-ani input::placeholder {
   color: #111;
-  opacity: 0.5;
+  opacity: 0.7;
   font-weight: normal;
 }
 
