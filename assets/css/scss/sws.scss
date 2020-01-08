@@ -570,9 +570,101 @@ section li{
             font-size:24px;
             color:$white;
         }
-
     }
-    
+}
+
+
+/* 
+        영상라이브 채팅 페이지
+*/
+$sub-left-width: 1448px;
+$sub-right-width: calc(100% - 1448px);
+.video-area {
+    width: 100%;
+    min-width: $section-min-width;
+    height: 880px;
+    &::after {
+        @include clear();
+    }
+    .player-wrap, .chat-wrap{
+        float: left;
+    }
+}
+.player-wrap {
+    width: $sub-left-width;
+    height: 100%;    
+    margin: auto;    
+    text-align: center;
+    background-color:#111;
+}
+.chat-wrap{
+    width: $sub-right-width;
+    height: 100%;    
+    background-color: #fafafa;
+    .chat-title {
+        width: 100%;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 20px;
+        border-bottom: $border-style;
+        background-color: $white;
+        h3 {
+            float: left;
+            font-size: $font-size-large;
+        }
+        .more-btn {
+            display: block;
+            float: right;
+            color: $link-color;
+            font-size: 22px;
+        }
+        
+    }
+    .chat-con {
+        height: 880px - 64px - 88px;
+        padding :20px;
+        line-height: 1.5;
+        font-size: $font-size-base;
+        color:#666;
+        overflow-y: auto;
+    }
+    .chat-input {
+        width: 100%;
+        height: 88px;
+        line-height: 88px;
+        padding: 0 20px;
+        text-align: center;
+        border-top: $border-style;
+        border-bottom: $border-style;
+        background-color: $white;
+    }
+
+}
+
+.sub-live{
+    &::after{
+        @include clear();
+    }
+    section{
+        float: left;
+    }
+    .related-video{
+        width: $sub-left-width;
+        padding: 40px 84px 121px;
+
+        .video-user{
+            border-bottom: $border-style;
+            border-top: $border-style;
+        }
+        .video-items{
+            border-bottom: $border-style;
+        }
+    }
+    .recommended-video{
+        width: $sub-right-width;
+        padding:18px 16px;
+        background-color: $sidebar-color;
+    }
 
 }
 
