@@ -5,12 +5,20 @@
     clear: both;
     float: none;
 }
-@mixin logo {
-    background-image: url(../img/sws-bi-black.png);
-    background-repeat:  no-repeat;
-    background-size:  64px 23px;
-    background-position: 24px 20px;
-}
+@mixin multi-ellipsis {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-wrap:break-word;
+} 
+@mixin single-ellipsis {
+    overflow: hidden;
+	text-overflow: ellipsis;
+    display: -webkit-box;   
+	white-space: nowrap;
+} 
 
 @mixin img-circle($top, $size) {
     display: inline-block; 
@@ -27,33 +35,26 @@
     background-position: center;
 }
 
-@mixin main-title {
-    padding: 17px 80px;
+@mixin main-title {    
+    padding: 33px 80px 17px;
     font-size: $font-size-h2;
     color: $font-color-base;
     font-weight: $font-weight-bold;    
     border-bottom: $border-style;
 }
 
-@mixin img-area {
-    position: relative;
-    margin-bottom: $space-width-small;
-}
-@mixin user-area {
-    margin-top: -6px; 
-    padding-bottom: 7px;
-}
-@mixin desc-area {
-    margin-top: 13px;
+@mixin desc-area {    
     margin-bottom: 20px;  
     padding-right: 64px;  
     line-height: 24px;
     font-size: 18px;
     color: $black;
+    @include multi-ellipsis();
 }
 
-$space-circle-width: 72px;
+
 @mixin circle-box {
+    $space-circle-width: 72px;
     display: block;
     position: absolute;       
     top: 50%;

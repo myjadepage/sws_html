@@ -9,29 +9,31 @@
 .content{
     float: right;   
     border-left: $border-style;
-    width: calc( #{100%} - #{$sidebar-width} );
+    width: calc( #{100%} - #{$sidebar-width} );    
+}
+.sub{
+    padding-top: $header-height;   
 }
 .main{
     min-width: $section-min-width;
-    padding-top: $space-width-small;
+    padding-top: $header-height;   
 
     .title{
         @include main-title();
     }
     section{
         position: relative;
-        padding-top: 56px;
+        padding-top: $space-width-base + $space-width-small;
         padding-bottom: $space-width-base * 2;
         margin: 0 ($space-width-base * 2);    
         border-bottom: $border-style;
         
         .section-title{
             padding-bottom: $space-width-small * 2;
-            font-size: $space-width-small * 2;
+            font-size: $font-size-h3;
             font-weight: $font-weight-semi;
-            color: $font-color-base;
             &.barnd-format{
-                font-size:24px;
+                font-size:$font-size-h4;
             }
         }        
         .section-title span{ color: $main-color; }
@@ -44,160 +46,29 @@
         i{ 
             position: relative;
             top:3px;
-            font-size: 24px; 
+            font-size: $icon-size-base; 
         }
     }
 }
 
 
-
-/*
-    오늘이 방송 보기 , 브랜드캠페인
-*/
-section li{
-    background-color: $white;
-    &.swiper-slide { width: 496px; }
-}
-#today-spec .swiper-slide{ width: 240px; }
-
-.img-area{
-    @include img-area();
-
-    .circle-box{    
-        @include circle-box();
-    }
-    &:hover .circle-box{
-        cursor: pointer;
-        opacity: 0.5;
-
-        i{
-            font-size: 45px;
-            color: $white;
-            transition: all 0.2s;
-        }
-    }
-    &:active .circle-box {
-        cursor: pointer;
-        opacity: 0.3;
-    }
-    img{
-       @include img();
-    }
-}
-.user-area{ 
-    @include user-area();         
-    .user-icon {
-        li:not(:first-child) { margin-left: -15px; } 
-        i{
-            @include img-circle(8px, 32px);
-            font-size: $font-size-base;
-            color: $gray500;
-        }        
-    }
-    .user-name, .user-icon, .user-icon li, .user-name li{
-        display: inline;
-        font-size: $font-size-base;
-        color: $gray500;
-    }
-    
-}
-.desc-area {       
-    @include desc-area();
-}
-.price-area{
-    font-family: 'Roboto','Noto Sans KR', sans-serif;
-    font-size: 20px;
-    font-weight: $font-weight-semi;
-    color: $main-color;
-    del{
-        padding:0 20px 0 8px;
-        font-weight: $font-weight-normal;
-        font-size: $font-size-medium;
-        color: $gray300;
-    }
-    em{
-        font-weight: $font-weight-normal;
-        font-size:$font-size-large;
-    }
-    
-}
-
-.live-info-top{
-    @include live-info(10px,null, null, 10px);
-
-}
-.live-info-bottom{
-    @include live-info(null,10px, 10px,null);
-
-}
-.ic-live-wrap{
-    display: inline-block;
-    padding:5px 8px 4px;
-    border-radius: 2px;
-    font-family: $font-family-sub;
-    font-weight: $font-weight-normal;
-    font-size: 13px;
-    color: $white; 
-    opacity: 0.8;
-    em{ 
-        font-weight: $font-weight-semi;
-        padding-right: 5px;
-    }
-    &.status-onair{ 
-        background-color:$main-color; 
-    }
-    &.status-living{ 
-        background-color: $sub-color; 
-    }
-    &.status-view, &.status-tag{
-        background-color: $black;
-        opacity: 0.6;
-    }
-    &.status-stop{
-        background-color: $black;
-        opacity: 1;
-    }
-    &.status-tip{
-        background-color: $sub-color;
-    }
-}
-
-// 이벤트
+// 이벤트 (이미지 배경)
 .img-area.bg{
     height: 160px;
     vertical-align: middle;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @include img();
 }
 
 // sws pick, brand 공통
-.small-menu{
-    position: relative;
-    top: -3px;
-    display: inline-block;
-    font-size: 20px;
-    color: $gray100;
-    li{
-        display: inline-block;
-        padding-right: $space-width-small;
-        padding-left: $space-width-small;
-        a{
-            font-size: 20px;
-            color: #aaa;
-            font-weight: $font-weight-normal;
-        }
-        &.active a{    
-            color: $main-color;
-        }
-    }
-}
 .pick-wrap{ 
     $width: 704px;
     $height: 396px;
     height: $height; 
     .pick-con{ display: none; }
-    #pick-fashion{ display: block; }
+    #pick-fashion{ display: block; }    
     .pick-img, .pick-info{ float: left; }
     .pick-img{ 
         width: $width; 
@@ -208,7 +79,7 @@ section li{
         .circle-box{ 
             opacity: 0.5; 
             i{
-                font-size: 45px;
+                font-size: $icon-size-large;
                 color: $white;
             }
         }
@@ -218,6 +89,7 @@ section li{
         width: calc(#{100%} - #{$width});
         height: $height; 
         padding-left: 48px;
+        
         .pick-text{
             margin-top: $space-width-small;
             margin-bottom: 46px;
@@ -242,13 +114,15 @@ section li{
             li{ 
                 float: left; 
                 position: relative;
-                margin-right: 96px;
+                width: 180px;
+                margin-right: 40px;
                 
                 &:last-child {
                     margin-right: 0;
                 }
                 &.topic {
                     margin-right:$space-width-small;  
+                    width: 320px;
                     height: 180px;
                     dd{
                         position: absolute;
@@ -269,9 +143,8 @@ section li{
                         color: $white;
                     }
                 }
-
             }
-            .img-area{               
+            .img-area{  
                 width: 128px;
                 height: 128px;
                 &.topic{ 
@@ -283,74 +156,37 @@ section li{
     }
 }
 
-// 오늘의 특가
-.img-area.spec{ width: 240px; }
+// pick 상품, 오늘의 특가 상품
+.pick .desc-area.spec{
+    @include single-ellipsis();
+}
 .desc-area.spec{       
     margin-top: 8px;
     margin-bottom: 18px;  
     padding-right: 24px; 
-    font-size: 16px;
+    font-size: $font-size-medium;
+    @include multi-ellipsis();
 }
 .price-area.spec{    
-    font-size: 18px;    
-    color: #000;
+    font-size: $font-size-large;    
+    color: $black;
     del{
         display: block;
-        padding:0 0 ($space-width-base / 2) 0;
+        padding-bottom: 4px;
     }
     em{
-        padding-left: $space-width-base / 2;
+        padding-left: $space-width-small / 2;
         font-size: $font-size-medium;
         color: $main-color;
     }
 }
 
 // 인기영상
-.img-area.brand{ width: 280px; }
 .view-area{
     font-family: $font-family-sub;
     font-size: $font-size-base;
     color: $link-color;
 }
-
-// 베스트채널
-.bestchannel {
-    .brand-logo-list {
-        min-width: $section-min-width;
-        overflow: hidden;
-
-        li{
-            float: left;
-            width: 144px;
-            margin-right: 40px;
-            text-align: center;
-            
-            &:last-child{ margin-right: 0; }
-    
-            .channel_circle{  
-                @include img-circle(null, 144px);
-            }
-               
-            .channel_name{
-                margin-top: $space-width-small;
-                margin-bottom: 4px;
-            }
-            .channel_official{
-                color: $sub-color;
-                font-size: $font-size-base;
-    
-                &::after{ content: "브랜드 공식"; }
-            }
-            .channel_muse{
-                color: #ff2a69;
-                font-size: 14px;
-    
-                &::after{ content: " 뮤즈"; }
-            }
-        }
-    }
-}
-
 
 /* icon*/
 
@@ -582,7 +418,7 @@ $sub-right-width: calc(100% - 1448px);
 .video-area {
     width: 100%;
     min-width: $section-min-width;
-    height: 880px;
+    height: 880px;    
     &::after {
         @include clear();
     }
@@ -621,7 +457,7 @@ $sub-right-width: calc(100% - 1448px);
         
     }
     .chat-con {
-        height: 880px - 64px - 88px;
+        height: calc(100% - 64px - 88px);
         padding :20px;
         line-height: 1.5;
         font-size: $font-size-base;
@@ -641,7 +477,7 @@ $sub-right-width: calc(100% - 1448px);
 
 }
 
-.sub-live{
+.video-con{     
     &::after{
         @include clear();
     }

@@ -6,11 +6,6 @@ body {
         family: $font-family-base;
     }   
 }
-.wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
 
 //slide
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev { right: -50px; }
@@ -24,45 +19,83 @@ body {
     width: $section-min-width;
     max-width: 100%;
 }
+// slide 3개
+.slide3 .swiper-slide {
+    background-color: $white;   
+    width: 489px; 
+    margin-right: 16px;
+}
+.slide4 .swiper-slide {
+    background-color: $white;   
+    width: 368px; 
+    margin-right: 10px;
+}
+.slide5 .swiper-slide {
+    background-color: $white;   
+    width: 287px; 
+    margin-right: 16px;
+}
+.slide6 .swiper-slide {
+    background-color: $white;   
+    width: 242px; 
+    margin-right: 10px;
+}
+.slide7 .swiper-slide {
+    background-color: $white;   
+    width: 240px; 
+    margin-right: 10px;
+}
+.slide8 .swiper-slide {
+    background-color: $white;   
+    width: 179px; 
+    margin-right: 10px;
+}
+
 
 /* header  */
 .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
     width: 100%;
     min-width: $site-min-width;
-    height: 64px;    
-    border-bottom: $border-style;
+    height: $header-height;   
+    // border-bottom: $border-style;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
     background-color: $white;
-
+    .inner-header{
+        line-height: $header-height;
+    }
     .logo{
+        $logo-size: 64px;
         float: left;
         width: 240px;
         height: 100%;
-        padding: 24px 0 0 95px;  
-        color: $font-color-base;           
-        font: {
-            size: $font-size-base;
-            family: $font-family-base;
-            weight: $font-weight-normal;
-        }  
-        @include logo();
+        padding-left:  $logo-size * 2;
+        background-image: url(../img/sws-bi-black.png);
+        background-repeat:  no-repeat;
+        background-size:   $logo-size 23px;
+        background-position: 54px 20px;
     }
     .search-area{
+        $height: 32px;
         position: relative;
         float: left;
-        padding: 15px 42px 14px;
+        padding: 17px 42px 0;
         .inner_search {
             position: relative;
-            z-index: 10;    
             width: 480px;
-            height: 32px;
-            padding: 0 $space-width-small;
+            height: $height;
+            padding: 0 16px;
             border: $border-style;
         }
         .search-input {
             float: left;
             width: 100%;
             border: 1px solid transparent;            
-            line-height: 30px;
+            line-height: #{$height - 4px};
             background-color: transparent;
             outline: 0;    
             -webkit-appearance: none;
@@ -78,36 +111,145 @@ body {
               top: 0;
               right: 0;
               width: 49px;
-              height: $space-width-small * 2;
+              height: $height;
               margin: 1px;
           }
           .btn-search i{
               font-size: $font-size-medium;
-              color: $font-color-base;
           }
     }
     .nav{
         float: right; 
         text-align: right;
-        padding: 20px 32px 10px; 
+        padding-right:32px;
+        padding-top: 5px; 
 
         .nav-menu >li{
             float: left;
             padding-left: $space-width-base / 2;
         }
-        .nav-menu >li i {
-            width: $space-width-small *2;
-            height: $space-width-small *2;
-            font-size: 24px; 
+        .nav-menu >li i {        
+            font-size: $icon-size-base; 
         }
         .nav-menu >li i.img-circle{ 
-            @include img-circle(-4px, null)
+            width: 32px;
+            height: 32px;
+            @include img-circle(8px, null)
+        }
+        .nav-menu >li a{
+            color:$link-color;
         }
         .nav-menu >li a:hover i{
             color: $font-color-base;
         }
+    }    
+}
+#menu_toggle{
+    display: block; 
+    position: absolute;
+    top: 2px;
+    left: 22px;    
+    z-index: 10000;     
+    i { 
+        font-size: 20px; 
+        color: $main-color;
     }
 }
+.wrapper {
+    position: relative;    
+    overflow: hidden;
+    width: 100%;   
+}
+
+
+// sidebar 
+.sidebar {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $sidebar-width;
+    padding-top: $header-height;
+    color: $font-color-base;
+    background-color: $sidebar-color; 
+    
+    li{
+        $height: 40px;
+        position: relative;
+        height: $height;
+        line-height: $height;
+        padding-left:26px;       
+        i{
+            font-size:$font-size-medium;
+            margin-right: $space-width-small;
+        }
+        &:hover{
+            background-color: $gray100
+        }
+        &.active{
+            background-color: #ffe3e8;
+        }
+        &.active i, &.active a{
+            color: $main-color;
+        }
+        &.my-channel{
+            border-top: $border-style;
+            margin: $space-width-small 0 24px;
+            padding-top: $space-width-small;
+            &:hover{
+                background-color: transparent; 
+            }
+        }
+    }
+    .nav{
+        overflow: hidden;
+        width: 100%;   
+        padding-top: $space-width-small;
+    }
+    .nav-mychannel li{ 
+        padding-left: 30px;   
+        i.img-circle {
+            @include img-circle(7px, 24px);
+        }
+        &.more-channel{
+            background-color: transparent;
+            a {               
+                padding-left: 6px;
+            }
+        }
+        
+        .ic-new-circle{
+            @include ic-new-circle();
+            position: absolute;
+            top: 20px;
+            right: $space-width-small;
+        }
+    } 
+}
+
+
+
+.sidebar-sm{
+    .content{ 
+        width: calc(#{100%} - #{$sidebar-sm-width});        
+    }
+    .sidebar { 
+        width: $sidebar-sm-width;
+        transition: all 0.2s;
+        .nav em,.nav-mychannel em, .nav-mychannel .more-channel{
+            display: none;
+        }
+        .nav-mychannel li{ 
+            padding-left: 20px; 
+            .ic-new-circle {
+                top:12px;
+                right: 10px;
+            }
+        }
+
+    }
+} 
 
 
 // footer
@@ -146,111 +288,8 @@ body {
         padding-top: 6px;
         padding-left: $space-width-base / 2;
     }
-    .social-item i{ font-size: 24px; }
+    .social-item i{ font-size: $icon-size-base; }
 }
-
-// sidebar 
-.sidebar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: $sidebar-width;
-    display: block;
-    z-index: 1;
-    color: $font-color-base;
-    background-color: $sidebar-color; 
-    
-    li{
-        position: relative;
-        height: $space-width-base;
-        line-height: $space-width-base;
-        padding-left:26px;
-        a{
-            color: $font-color-base;
-            font-size: $font-size-base;
-        }
-        i{
-            font-size:$font-size-medium;
-            margin-right: $space-width-small;
-        }
-        &:hover{
-            background-color: $gray100
-        }
-        &.active{
-            background-color: #ffe3e8;
-        }
-        &.active i, &.active a{
-            color: $main-color;
-        }
-        &.my-channel{
-            border-top: $border-style;
-            margin: $space-width-small 0 24px;
-            padding-top: $space-width-small;
-            &:hover{
-                background-color: transparent; 
-            }
-        }
-    }
-    .nav{
-        overflow: hidden;
-        width: 100%;   
-        padding-top: $space-width-small;
-    }
-    .nav-mychannel li{ 
-        padding-left: 30px;   
-        i.img-circle {
-            @include img-circle(7px, 24px);
-        }
-        &.more-channel{
-            background-color: transparent;
-            a {
-                color: $link-color;
-                padding-left: 6px;
-            }
-        }
-        
-        .ic-new-circle{
-            @include ic-new-circle();
-            position: absolute;
-            top: 20px;
-            right: $space-width-small;
-        }
-    } 
-}
-
-#menu_toggle{
-    position: fixed;
-    bottom: 50px;
-    left: 20px;    
-    display: block; 
-    cursor: pointer;       
-    i { 
-        font-size: 24px; 
-    }
-}
-
-.sidebar-sm{
-    .content{ 
-        width: calc(#{100%} - #{$sidebar-sm-width});        
-    }
-    .sidebar { 
-        width: $sidebar-sm-width;
-        transition: all 0.2s;
-        .nav em,.nav-mychannel em, .nav-mychannel .more-channel{
-            display: none;
-        }
-        .nav-mychannel li{ 
-            padding-left: 20px; 
-            .ic-new-circle {
-                top:12px;
-                right: 10px;
-            }
-        }
-
-    }
-} 
-
 
 /*
  searchbar animation
@@ -349,6 +388,173 @@ body {
           opacity: 0.7;
           font-weight: normal;
         }
-      }  
+      }
+}
 
+// -------------------------------------list display
+.img-area{  
+    position: relative;
+    margin-bottom: $space-width-small; 
+    .circle-box{    
+        @include circle-box();
+    }
+    &:hover .circle-box{
+        cursor: pointer;
+        opacity: 0.5;
+        i{
+            font-size: $icon-size-large;
+            color: $white;
+            transition: all 0.2s;
+        }
+    }
+    &:active .circle-box {
+        cursor: pointer;
+        opacity: 0.3;
+    }
+    img{
+       @include img();
+    }
+}
+.user-area{   
+    margin-top: -7px; 
+    margin-bottom: 13px;
+    .user-icon {
+        li:not(:first-child) { margin-left: -15px; } 
+        i{
+            @include img-circle(8px, 32px);
+            font-size: $font-size-base;
+            color: $gray500;
+        }        
+    }
+    .user-name, .user-icon, .user-icon li, .user-name li{
+        display: inline;
+        font-size: $font-size-base;
+        color: $gray500;
+    }
+    
+}
+.desc-area {       
+    @include desc-area();
+}
+.price-area{
+    font-family: 'Roboto','Noto Sans KR', sans-serif;
+    font-size: 20px;
+    font-weight: $font-weight-semi;
+    color: $main-color;
+    del{
+        padding:0 20px 0 8px;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-medium;
+        color: $gray300;
+    }
+    em{
+        font-weight: $font-weight-normal;
+        font-size:$font-size-large;
+    }
+}
+
+// list img status(ex, live, view, tag )
+.live-info-top{
+    @include live-info(10px,null, null, 10px);
+}
+.live-info-bottom{
+    @include live-info(null,10px, 10px,null);
+}
+.ic-live-wrap{
+    display: inline-block;
+    padding:5px 8px 4px;
+    border-radius: 2px;
+    font-family: $font-family-sub;
+    font-weight: $font-weight-normal;
+    font-size: 13px;
+    color: $white; 
+    opacity: 0.8;
+    em{ 
+        font-weight: $font-weight-semi;
+        padding-right: 5px;
+    }
+    &.status-onair{ 
+        background-color:$main-color; 
+    }
+    &.status-living{ 
+        background-color: $sub-color; 
+    }
+    &.status-view, &.status-tag{
+        background-color: $black;
+        opacity: 0.6;
+    }
+    &.status-stop{
+        background-color: $black;
+        opacity: 1;
+    }
+    &.status-tip{
+        background-color: $sub-color;
+    }
+}
+
+
+// 타이틀 옆 작은 메뉴
+.small-menu{
+    position: relative;
+    top: -3px;
+    display: inline-block;
+    font-size: 20px;
+    color: $gray100;
+    li{
+        display: inline-block;
+        padding-right: $space-width-small;
+        padding-left: $space-width-small;
+        a{
+            font-size: 20px;
+            color: #aaa;
+            font-weight: $font-weight-normal;
+        }
+        &.active a{    
+            color: $main-color;
+        }
+    }
+}
+
+
+// 브랜드 로고 리스트
+.brand-logo-list {
+    min-width: $section-min-width;
+    overflow: hidden;
+
+    li{
+        $width: 144px;
+        float: left;
+        width: $width;
+        margin-right: 40px;
+        text-align: center;
+        
+        &:last-child{ margin-right: 0; }
+
+        .channel_circle{  
+            @include img-circle(null, $width);
+        }
+           
+        .channel_name{
+            margin-top: $space-width-small;
+            margin-bottom: 4px;
+            line-height: 1.5;
+            font-size: $font-size-medium;
+            @include multi-ellipsis();
+        }
+        .channel_official{
+            color: $sub-color;
+            &::after{ content: "브랜드 공식"; }
+        }
+        .channel_muse{
+            color: $main-color;
+            font-size: $font-size-base;
+
+            &::after{ content: " 뮤즈"; }
+        }
+    }
+}
+
+// 브랜드 로고 리스트 슬라이드일경우
+.swiper-wrapper.brand-logo-list {
+    overflow: visible; 
 }

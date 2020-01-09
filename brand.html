@@ -19,8 +19,10 @@
 
 <body>
     <!-- 상단네비 -->
-    <header class="header">       
-        <h1 class="logo">shall we shop</h1>
+    <header class="header">  
+        <div class="inner-header">
+        <a id="menu_toggle"><i class="xi-bars"></i></a>   
+        <h1 class="logo"><a href="#">shall we shop</a></h1>
         <div class="search-area">
             <fieldset>
                 <legend class="text-hidden">검색</legend>
@@ -44,6 +46,7 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <div class="wrapper sidebar-lg">
@@ -85,10 +88,7 @@
                 <li class="more-channel"><a href="/">
                     <i class="xi-angle-down-min"></i><em>8개 더보기</em></a>
                 </li>
-            </ul>
-            <a id="menu_toggle">               
-                <i class="xi-hamburger-back"></i>               
-            </a>
+            </ul>           
         </div>
 
         <!-- content -->
@@ -102,7 +102,6 @@
                         <li><a href="#brand-food">식품</a></li>
                     </ul>
                     <div class="section-more search-bar-ani">
-                        <!-- <i class="xi-search"></i>  -->
                         <input type="text" placeholder="검색">
                         <div class="search"></div>찾는 브랜드가 있나요?
                     </div>
@@ -116,20 +115,14 @@
                     <article class="pick-wrap">
                         <div class="img-area pick-img">
                             <img src="assets/img/pick_fashion_01.jpg" alt="클리오추천템">
-                            <span class="circle-box"><i class="xi-play"></i></span>                           
-                            <div class="live-info-bottom">
-                                <span class="ic-live-wrap status-tag"><i class="xi-tags"></i> 10</span>
-                            </div>
+                            <span class="circle-box"><i class="xi-play"></i></span>                                                       
                         </div>
                         <div class="pick-info">
                             <div class="user-area">
                                 <ul class="user-icon">
                                     <li><i class="img-circle brand-goodal"></i><em class="text-hidden">구달</em></li>                                   
                                 </ul>
-                                <ul class="user-name">
-                                    <li>구달</li>                                  
-                                </ul>
-                            </div>
+                                <span class="user-name">구달</span>
                             <p class="pick-text">
                                 <strong>추워지기전에 준비하자.</strong><br>
                                 <span>구달 모델 홍수주가 알려주는 속보습 충전법!<br>
@@ -183,14 +176,12 @@
                                             </div>
                                         </dt>
                                         <dd class="user-area">
-                                            <ul class="user-icon">                                               
-                                                <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
-                                            </ul>
-                                            <ul class="user-name">                                              
-                                                <li><i class="xi-close-min"></i>질스튜어트</li>
-                                            </ul>
+                                            <p class="user-icon">                                               
+                                                <i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em>
+                                            </p>
+                                            <span class="user-name">질스튜어트</span>
                                         </dd>
-                                        <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
+                                        <dd class="desc-area">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
                                     </dl>    
                             </li>
                             <li class="swiper-slide">
@@ -202,14 +193,12 @@
                                         </div>
                                     </dt>
                                     <dd class="user-area">
-                                        <ul class="user-icon">                                               
-                                            <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
-                                        </ul>
-                                        <ul class="user-name">                                              
-                                            <li><i class="xi-close-min"></i>질스튜어트</li>
-                                        </ul>
+                                        <p class="user-icon">                                               
+                                            <i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em>
+                                        </p>
+                                        <span class="user-name">질스튜어트</span>
                                     </dd>
-                                    <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
+                                    <dd class="desc-area">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
                                 </dl>    
                         </li>
                         <li class="swiper-slide">
@@ -221,14 +210,12 @@
                                     </div>
                                 </dt>
                                 <dd class="user-area">
-                                    <ul class="user-icon">                                               
-                                        <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
-                                    </ul>
-                                    <ul class="user-name">                                              
-                                        <li><i class="xi-close-min"></i>질스튜어트</li>
-                                    </ul>
+                                    <p class="user-icon">                                               
+                                        <i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em>
+                                    </p>
+                                    <span class="user-name">질스튜어트</span>
                                 </dd>
-                                <dd class="desc-area multi_ellipsis">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
+                                <dd class="desc-area">로드샵 원브랜드 추천템~!!구달+클리오+페리페라 숨겨진 꿀템들!!!</dd>
                             </dl>    
                     </li>
 
@@ -257,12 +244,9 @@
                                         <span class="text-hidden">이벤트1</span>
                                     </dt>
                                     <dd class="user-area">                                       
-                                        <ul class="user-name">                                                                                       
-                                            <li>질스튜어트</li>
-                                        </ul>
+                                        <span class="user-name">질스튜어트</span>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">LOVE MY SELF - 강승현의 PICK</dd>
-                                   
                                 </dl>                                  
                             </li> 
                             <li class="swiper-slide">
@@ -271,9 +255,7 @@
                                         <span class="text-hidden">이벤트2</span>
                                     </dt>
                                     <dd class="user-area">                                       
-                                        <ul class="user-name">                                                                                       
-                                            <li>질스튜어트</li>
-                                        </ul>
+                                        <span class="user-name">질스튜어트</span>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">시크릿네이처 원더풀데이 3탄, 대용량 올인원 클렌징 솝 수선화 클렌징 리퀴드 솝 1,000개 증정! 시크릿네이처 원더풀</dd>
                                 </dl>                                  
@@ -284,9 +266,7 @@
                                         <span class="text-hidden">이벤트3</span>
                                     </dt>
                                     <dd class="user-area">                                       
-                                        <ul class="user-name">                                                                                       
-                                            <li>질스튜어트</li>
-                                        </ul>
+                                        <span class="user-name">질스튜어트</span>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">꿀잠잔듯 핑크 광채쿠션, "꿀 잠 잔 듯 생기 넘치는" 셀피를 SNS에 인증하세요</dd>
                                 </dl>                                  
@@ -297,9 +277,7 @@
                                         <span class="text-hidden">이벤트4</span>
                                     </dt>
                                     <dd class="user-area">                                       
-                                        <ul class="user-name">                                                                                       
-                                            <li>질스튜어트</li>
-                                        </ul>
+                                        <span class="user-name">질스튜어트</span>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">시크릿네이처 원더풀데이 3탄, 대용량 올인원 클렌징 솝 수선화 클렌징 리퀴드 솝 1,000개 증정! 시크릿네이처 원더풀</dd>
                                 </dl>                                  
@@ -325,12 +303,10 @@
                                         <a href="/"><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
                                     </dt>
                                     <dd class="user-area">
-                                        <ul class="user-icon">
-                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
-                                        </ul>
-                                        <ul class="user-name">
-                                            <li>리아</li>
-                                        </ul>
+                                        <p class="user-icon">
+                                            <i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em>                                             
+                                        </p>
+                                        <span class="user-name">리아</span>
                                     </dd>                                       
                                 </dl>                       
                             </li>
@@ -340,13 +316,11 @@
                                         <a href="/"><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
                                     </dt>
                                     <dd class="user-area">
-                                        <ul class="user-icon">
-                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
-                                        </ul>
-                                        <ul class="user-name">
-                                            <li>리아</li>
-                                        </ul>
-                                    </dd>                                       
+                                        <p class="user-icon">
+                                            <i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em>                                             
+                                        </p>
+                                        <span class="user-name">리아</span>
+                                    </dd>                                        
                                 </dl>                       
                             </li>
                             <li class="swiper-slide">
@@ -355,13 +329,11 @@
                                         <a href="/"><img src="assets/img/itbrand_01.jpg" alt="페리페라"></a>
                                     </dt>
                                     <dd class="user-area">
-                                        <ul class="user-icon">
-                                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em></li>                                               
-                                        </ul>
-                                        <ul class="user-name">
-                                            <li>리아</li>
-                                        </ul>
-                                    </dd>                                       
+                                        <p class="user-icon">
+                                            <i class="img-circle brand-clio"></i><em class="text-hidden">페리페라</em>                                             
+                                        </p>
+                                        <span class="user-name">리아</span>
+                                    </dd>                                      
                                 </dl>                       
                             </li>                          
                            

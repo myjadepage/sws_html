@@ -1,11 +1,11 @@
 // sidebar small or large
 $('#menu_toggle').on('click', function() {
   $('.wrapper').toggleClass('sidebar-lg sidebar-sm');
-  $(this).find('i').toggleClass('xi-hamburger-back xi-hamburger-out');
+  $(this).find('i').toggleClass('xi-hamburger-out');
 });
 
 // swspick tab menu
-$(".pick-menu a").click(function(e) {
+$("#pick-menu a").click(function(e) {
   e.preventDefault();
   $(this).parent().addClass("active");
   $(this).parent().siblings().removeClass("active");
@@ -90,6 +90,19 @@ var LIVETODAY = new Swiper('#live-today', {
       prevEl: '.btn-prev-brand-channel',
     },
 
+  });
+
+  // 브랜드캠페인
+  var CAMP = new Swiper('#brand-camp', {
+    slidesPerView: 3,
+    spaceBetween: 16,
+    slidesPerGroup: 3,
+    loop: false,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: '.btn-next-brand-camp',
+      prevEl: '.btn-prev-brand-camp',
+    },
   });
 
   //브랜드포맷01

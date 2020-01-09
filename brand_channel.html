@@ -19,8 +19,10 @@
 
 <body>
     <!-- 상단네비 -->
-    <header class="header">       
-        <h1 class="logo">shall we shop</h1>
+    <header class="header">  
+        <div class="inner-header">
+        <a id="menu_toggle"><i class="xi-bars"></i></a>   
+        <h1 class="logo"><a href="#">shall we shop</a></h1>
         <div class="search-area">
             <fieldset>
                 <legend class="text-hidden">검색</legend>
@@ -44,6 +46,7 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <div class="wrapper sidebar-lg">
@@ -86,37 +89,35 @@
                     <i class="xi-angle-down-min"></i><em>8개 더보기</em></a>
                 </li>
             </ul>
-            <a id="menu_toggle">               
-                <i class="xi-hamburger-back"></i>               
-            </a>
+            <a id="menu_toggle"><i class="xi-bars"></i></a>
         </div>
 
         <!-- content -->
         <div class="content">
-            <div class="full-brand-area" style="background-image: url('assets/img/full-brand01.jpg');">    
-                <div role="none" class="black-bar"></div>            
-                <dl class="full-brand-info">
-                    <dd class="brand-area">
-                        <ul class="brand-icon">
-                            <li><i class="img-circle brand-clio"></i><em class="text-hidden">클리오 코스메틱</em></li>
-                            <li>
-                                <h3>클리오 코스메틱</h3>
-                                <p>클리오 코스메틱</p>
-                            </li>                         
-                        </ul>                        
-                    </dd>
-                    <dd class="desc-area">프로 아티스트의 노하우를 가장 쉽게 즐길 수 있는 혁신적인 품질의 제품과 메이크업 테크닉을 만나보세요</dd>
-                    <dd class="view-area"><i class="xi-heart-o"></i>3.2천</dd>
-                </dl>
-            </div>            
-
             <div class="main">
+                <div class="full-brand-area" style="background-image: url('assets/img/full-brand01.jpg');">    
+                    <div role="none" class="black-bar"></div>            
+                    <dl class="full-brand-info">
+                        <dd class="brand-area">
+                            <ul class="brand-icon">
+                                <li><i class="img-circle brand-clio"></i><em class="text-hidden">클리오 코스메틱</em></li>
+                                <li>
+                                    <h3>클리오 코스메틱</h3>
+                                    <p>클리오 코스메틱</p>
+                                </li>                         
+                            </ul>                        
+                        </dd>
+                        <dd class="desc-area">프로 아티스트의 노하우를 가장 쉽게 즐길 수 있는 혁신적인 품질의 제품과 메이크업 테크닉을 만나보세요</dd>
+                        <dd class="view-area"><i class="xi-heart-o"></i>3.2천</dd>
+                    </dl>
+                </div>  
+
                 <!-- @@라이브방송 보기 -->
                 <section class="today-live">
                     <h3 class="section-title"><span>LIVE</span> 방송 보기<a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a></h3>
 
                    <!-- Swiper -->                  
-                    <div class="swiper-container" id="live-today">
+                    <div class="swiper-container  slide3" id="live-today">
                         <ul class="swiper-wrapper">
                            
                             <!-- 라이브 중인 영상 -->
@@ -330,7 +331,7 @@
                         <a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a>
                     </h3>
                     <!-- Swiper -->                  
-                    <div class="swiper-container" id="event-area">
+                    <div class="swiper-container slide3" id="event-area">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <dl>
@@ -402,7 +403,7 @@
                         <a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a>
                     </h3>
                       <!-- Swiper -->                  
-                    <div class="swiper-container" id="brand-channel">
+                    <div class="swiper-container  slide8" id="brand-channel">
                         <ul class="swiper-wrapper brand-logo-list">
                             <li class="swiper-slide">
                                 <dt class="channel_circle" style="background-image: url(assets/img/brand/logo-clio.png);"></dt>
@@ -451,10 +452,10 @@
                     <div class="swiper-button-prev btn-prev-brand-channel"></div>
                 </section>
 
-                 <!-- @@인기영상 -->
+                 <!-- @@ -->
                  <section class="popular">                   
                    <!-- Swiper -->                  
-                    <div class="swiper-container" id="today-pop">
+                    <div class="swiper-container slide3" id="today-pop">
                         <ul class="swiper-wrapper">
                             <li class="swiper-slide">
                                 <dl>
@@ -472,7 +473,7 @@
                                         </ul>
                                         <ul class="user-name">
                                             <li>리아</li>
-                                            <li>질스튜어트</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -495,7 +496,7 @@
                                         </ul>
                                         <ul class="user-name">
                                             <li>리아</li>
-                                            <li>질스튜어트</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰PERIPERA - INK POCKET SHADOW</dd>
@@ -518,7 +519,7 @@
                                         </ul>
                                         <ul class="user-name">
                                             <li>리아</li>
-                                            <li>질스튜어트</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -541,7 +542,7 @@
                                         </ul>
                                         <ul class="user-name">
                                             <li>리아</li>
-                                            <li>질스튜어트</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                         </ul>
                                     </dd>
                                     <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -562,7 +563,7 @@
                     <h3 class="section-title barnd-format"><i class="xi-lightbulb-o"></i>잡티의 정석 : 청귤라인</h3>
                
                     <!-- Swiper -->                  
-                     <div class="swiper-container" id="brand-format-01">
+                     <div class="swiper-container slide4" id="brand-format-01">
                          <ul class="swiper-wrapper">
                              <li class="swiper-slide">
                                  <dl>
@@ -579,8 +580,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -602,8 +603,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰PERIPERA - INK POCKET SHADOW</dd>
@@ -625,8 +626,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -648,8 +649,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -668,7 +669,7 @@
                     <h3 class="section-title barnd-format"><i class="xi-lightbulb-o"></i>수부지들을 위한 스킨케어 루틴!</h3>
                
                     <!-- Swiper -->                  
-                     <div class="swiper-container" id="brand-format-02">
+                     <div class="swiper-container slide4" id="brand-format-02">
                          <ul class="swiper-wrapper">
                              <li class="swiper-slide">
                                  <dl>
@@ -685,8 +686,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -708,8 +709,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰PERIPERA - INK POCKET SHADOW</dd>
@@ -731,8 +732,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -754,8 +755,8 @@
                                              <li><i class="img-circle brand-jill"></i><em class="text-hidden">질스튜어트</em></li>
                                          </ul>
                                          <ul class="user-name">
-                                             <li>리아</li>
-                                             <li>질스튜어트</li>
+                                            <li>리아</li>
+                                            <li><i class="xi-close-min"></i>질스튜어트</li>
                                          </ul>
                                      </dd>
                                      <dd class="desc-area multi_ellipsis">신상!! 페리페라 잉크 포켓 섀도우 팔레트 꿀조합 리뷰</dd>
@@ -778,12 +779,11 @@
                             <li class="active"><a href="#">신상</a></li>|
                             <li><a href="#">인기</a></li>
                         </ul>
-
                         <a href="/" class="section-more">전체보기 <i class="xi-angle-right-min"></i></a>
                     </h3>
 
                     <!-- Swiper -->                  
-                    <div class="swiper-container" id="today-spec">
+                    <div class="swiper-container slide6" id="today-spec">
                         <ul class="swiper-wrapper">                          
                           
                             <li class="swiper-slide">
@@ -919,7 +919,7 @@
                     </h3>
 
                     <!-- Swiper -->                  
-                    <div class="swiper-container" id="brand-format-03">
+                    <div class="swiper-container slide6" id="brand-format-03">
                         <ul class="swiper-wrapper">                          
                           
                             <li class="swiper-slide">
@@ -1049,6 +1049,7 @@
                     <div class="swiper-button-prev btn-prev-brand-format-03"></div>
                 </section>
             </div>
+
 
 
 

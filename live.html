@@ -19,8 +19,10 @@
 
 <body>
     <!-- 상단네비 -->
-    <header class="header">       
-        <h1 class="logo">shall we shop</h1>
+    <header class="header">  
+        <div class="inner-header">
+        <a id="menu_toggle"><i class="xi-bars"></i></a>   
+        <h1 class="logo"><a href="#">shall we shop</a></h1>
         <div class="search-area">
             <fieldset>
                 <legend class="text-hidden">검색</legend>
@@ -44,6 +46,7 @@
                 </li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <div class="wrapper sidebar-sm">
@@ -92,86 +95,85 @@
 
         <!-- content -->
         <div class="content">
-            <!-- 영상, 채팅 영역 -->
-            <div class="video-area">
-                <!-- 플레이어 -->
-                <div class="player-wrap">
-                    <!-- <img src="assets/img/brand_fromat04.jpg" alt="">-->  
-<style>
-    .jwplayer {margin: auto}  
-    .jw-flag-fullscreen .jw-media, .jw-flag-fullscreen .jw-preview,
-    .jw-flag-floating .jw-media, .jw-flag-floating .jw-preview{ width: 100%; height: 100%; top: 0; left: 0;}    
-    .jw-media, .jw-preview { position: absolute;width: 1280px;height: 720px;    top: 46px;left: 84px;}
-    .jw-progress { background-color: #ff2a69; }
-    .jw-controlbar { padding: 0 40px; }
-    .jw-breakpoint-7 .jw-controlbar .jw-button-container .jw-icon-inline .jw-svg-icon, 
-    .jw-breakpoint-7 .jw-controlbar .jw-button-container .jw-icon-volume .jw-svg-icon { height: 25px;width: 25px; }
-    .jw-breakpoint-7 .jw-controlbar .jw-button-container .jw-icon-inline .jw-svg-icon.jw-svg-icon-play{
-        height: 20px;width: 20px; }
-    .jw-icon-rewind{ display: none;}
-</style> 
-<script src="https://cdn.jwplayer.com/players/kjAt950f-mdbPdiiS.js"></script>
+            <div class="sub">
+                <!-- 영상, 채팅 영역 -->
+                <div class="video-area">
+                    <!-- 플레이어 -->
+                    <div class="player-wrap">
+                        <!-- <img src="assets/img/brand_fromat04.jpg" alt="">-->  
+    <style>
+        .jwplayer {margin: auto}  
+        .jw-flag-fullscreen .jw-media, .jw-flag-fullscreen .jw-preview,
+        .jw-flag-floating .jw-media, .jw-flag-floating .jw-preview{ width: 100%; height: 100%; top: 0; left: 0;}    
+        .jw-media, .jw-preview { position: absolute;width: 1280px;height: 720px;    top: 46px;left: 84px;}
+        .jw-progress { background-color: #ff2a69; }
+        .jw-controlbar { padding: 0 40px; }
+        .jw-breakpoint-7 .jw-controlbar .jw-button-container .jw-icon-inline .jw-svg-icon, 
+        .jw-breakpoint-7 .jw-controlbar .jw-button-container .jw-icon-volume .jw-svg-icon { height: 25px;width: 25px; }
+        .jw-breakpoint-7 .jw-controlbar .jw-button-container .jw-icon-inline .jw-svg-icon.jw-svg-icon-play{
+            height: 20px;width: 20px; }
+        .jw-icon-rewind{ display: none;}
+    </style> 
+    <script src="https://cdn.jwplayer.com/players/kjAt950f-mdbPdiiS.js"></script>
+                    </div>
+
+                    <!-- 채팅 -->
+                    <section class="chat-wrap">
+                        <div class="chat-title">
+                            <h3>대화</h3>
+                            <a class="more-btn"><i class="xi-ellipsis-v"></i></a>
+                        </div>
+
+                        <div class="chat-con">
+                            <p>안녕하세요,<br>
+                                라이브 방송에 오신것을 환영합니다!</p>
+                            <ul class="comment">
+                                <li></li>
+                            </ul>
+                        </div>
+
+                        <div class="chat-input">
+                            <input type="text"/>
+                            <button>입력</button>
+                        </div>
+                    </section>
+
                 </div>
-
-                <!-- 채팅 -->
-                <section class="chat-wrap">
-                    <div class="chat-title">
-                        <h3>대화</h3>
-                        <a class="more-btn"><i class="xi-ellipsis-v"></i></a>
-                    </div>
-
-                    <div class="chat-con">
-                        <p>안녕하세요,<br>
-                            라이브 방송에 오신것을 환영합니다!</p>
-                        <ul class="comment">
-                            <li></li>
+                
+                <!-- 영상 정보, 상품 -->
+                <div class="video-con">
+                    <section class="related-video">
+                        <ul class="video-info">
+                            <li class="video-desc">
+                                <small>#로드샵추천 #클리오 #구달 #페리페라</small>
+                                <h3>로드샵 원브랜드 추천템~! 구달+클리오+페리페라 숨겨진 꿀템들!!!</h3>
+                                <p>로드샵의 숨겨진 꿀템들을 소개합니다! </p>
+                            </li>
+                            <li class="video-social">
+                                <a href="/"><i class="xi-heart-o"></i></a>
+                                <a href="/"><i class="xi-share-alt-o"></i></a>
+                                <a href="/"><i class="xi-plus"></i></a>
+                                <a href="/"><i class="xi-ellipsis-h"></i></a>
+                            </li>
                         </ul>
-                    </div>
 
-                    <div class="chat-input">
-                        <input type="text"/>
-                        <button>입력</button>
-                    </div>
-                </section>
+                        <div class="video-user">
+                            
 
-            </div>
-
-
-
-
-            <div class="sub-live">
-                <section class="related-video">
-                    <ul class="video-info">
-                        <li class="video-desc">
-                            <small>#로드샵추천 #클리오 #구달 #페리페라</small>
-                            <h3>로드샵 원브랜드 추천템~! 구달+클리오+페리페라 숨겨진 꿀템들!!!</h3>
-                            <p>로드샵의 숨겨진 꿀템들을 소개합니다! </p>
-                        </li>
-                        <li class="video-social">
-                            <a href="/"><i class="xi-heart-o"></i></a>
-                            <a href="/"><i class="xi-share-alt-o"></i></a>
-                            <a href="/"><i class="xi-plus"></i></a>
-                            <a href="/"><i class="xi-ellipsis-h"></i></a>
-                        </li>
-                    </ul>
-
-                    <div class="video-user">
+                        </div>
                         
-
-                    </div>
-                    
-                    <div class="video-items">
+                        <div class="video-items">
 
 
-                    </div>
+                        </div>
 
-                </section>
+                    </section>
 
-                <section class="recommended-video"></section>
+                    <section class="recommended-video"></section>
 
 
+                </div>
             </div>
-
 
             <!-- 푸터 -->
             <footer class="footer">
