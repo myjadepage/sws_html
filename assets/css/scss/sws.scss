@@ -51,15 +51,19 @@
     }
 }
 
-
 // 이벤트 (이미지 배경)
 .img-area.bg{
     height: 160px;
+    border-radius: 4px;
+    border: solid 1px #e2e2e2;
     vertical-align: middle;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    @include img();
+    background-repeat: no-repeat;    
+}
+// itbrand 이미지 높이
+.img-area.brand{
+    height: 162px;
 }
 
 // sws pick, brand 공통

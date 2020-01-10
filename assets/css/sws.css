@@ -115,40 +115,42 @@ body {
   max-width: 100%;
 }
 
-.slide3 .swiper-slide {
+.swiper-slide {
   background-color: #fff;
-  width: 489px;
-  margin-right: 16px;
 }
 
-.slide4 .swiper-slide {
-  background-color: #fff;
+.slide3 .img-area {
+  width: 496px;
+  height: 279px;
+}
+
+.slide3 .img-area a {
+  display: block;
+}
+
+.slide4 .img-area {
   width: 368px;
-  margin-right: 10px;
+  height: 279px;
 }
 
-.slide5 .swiper-slide {
-  background-color: #fff;
-  width: 287px;
-  margin-right: 16px;
+.slide4 .img-area a {
+  display: block;
 }
 
-.slide6 .swiper-slide {
-  background-color: #fff;
-  width: 242px;
-  margin-right: 10px;
+.slide5 .img-area {
+  width: 280px;
 }
 
-.slide7 .swiper-slide {
-  background-color: #fff;
+.slide6 .img-area {
   width: 240px;
-  margin-right: 10px;
 }
 
-.slide8 .swiper-slide {
-  background-color: #fff;
+.slide7 .img-area {
+  width: 240px;
+}
+
+.slide8 .img-area {
   width: 179px;
-  margin-right: 10px;
 }
 
 /* header  */
@@ -588,6 +590,9 @@ body {
 .img-area {
   position: relative;
   margin-bottom: 16px;
+  border-radius: 4px;
+  border: solid 1px #e2e2e2;
+  overflow: hidden;
 }
 
 .img-area .circle-box {
@@ -631,8 +636,6 @@ body {
 
 .img-area img {
   max-width: 100%;
-  border-radius: 4px;
-  border: solid 1px #e2e2e2;
 }
 
 .user-area {
@@ -898,13 +901,16 @@ body {
 
 .img-area.bg {
   height: 160px;
+  border-radius: 4px;
+  border: solid 1px #e2e2e2;
   vertical-align: middle;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 100%;
-  border-radius: 4px;
-  border: solid 1px #e2e2e2;
+}
+
+.img-area.brand {
+  height: 162px;
 }
 
 .pick-wrap {

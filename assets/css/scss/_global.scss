@@ -19,36 +19,44 @@ body {
     width: $section-min-width;
     max-width: 100%;
 }
+.swiper-slide {
+    background-color: $white;  
+}
 // slide 3개
-.slide3 .swiper-slide {
-    background-color: $white;   
-    width: 489px; 
-    margin-right: 16px;
+.slide3 {    
+    .img-area{
+        width: 496px;
+        height: 279px;
+        a{ display: block;}
+    }
 }
-.slide4 .swiper-slide {
-    background-color: $white;   
-    width: 368px; 
-    margin-right: 10px;
+//slide 4개
+.slide4{    
+    .img-area{
+        width: 368px;
+        height: 279px;
+        a{ display: block;}
+    }  
 }
-.slide5 .swiper-slide {
-    background-color: $white;   
-    width: 287px; 
-    margin-right: 16px;
+.slide5{   
+    .img-area{
+        width: 280px;    
+    }
 }
-.slide6 .swiper-slide {
-    background-color: $white;   
-    width: 242px; 
-    margin-right: 10px;
+.slide6{
+    .img-area{
+        width: 240px; 
+    }
 }
-.slide7 .swiper-slide {
-    background-color: $white;   
-    width: 240px; 
-    margin-right: 10px;
+.slide7{
+    .img-area{
+        width: 240px; 
+    }
 }
-.slide8 .swiper-slide {
-    background-color: $white;   
-    width: 179px; 
-    margin-right: 10px;
+.slide8{
+    .img-area{
+        width: 179px; 
+    }
 }
 
 
@@ -397,6 +405,9 @@ body {
 .img-area{  
     position: relative;
     margin-bottom: $space-width-small; 
+    border-radius: 4px;
+    border: solid 1px #e2e2e2;
+    overflow: hidden;
     .circle-box{    
         @include circle-box();
     }
@@ -414,7 +425,7 @@ body {
         opacity: 0.3;
     }
     img{
-       @include img();
+      max-width: 100%;
     }
 }
 .user-area{   

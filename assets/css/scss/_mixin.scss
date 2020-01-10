@@ -74,11 +74,11 @@
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out 0s;
 }
-@mixin img {
-    max-width: 100%; 
-    border-radius: 4px;
-    border: solid 1px #e2e2e2;
-}
+// @mixin img {
+//     max-width: 100%; 
+//     border-radius: 4px;
+//     border: solid 1px #e2e2e2;
+// }
 
 @mixin live-info($top, $right, $bottom, $left){
     position: absolute;
