@@ -45,10 +45,10 @@
 
 @mixin desc-area {    
     margin-bottom: 20px;  
-    padding-right: 64px;  
+    padding-right: 50px;  
     line-height: 24px;
     font-size: 18px;
-    color: $black;
+    color: $black;   
     @include multi-ellipsis();
 }
 

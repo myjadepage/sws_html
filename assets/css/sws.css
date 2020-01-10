@@ -209,6 +209,8 @@ body {
   background-color: transparent;
   color: #000;
   border: none;
+  outline: 0;
+  -webkit-appearance: none;
   cursor: pointer;
 }
 
@@ -610,12 +612,12 @@ body {
   -webkit-transition: all .2s ease-out 0s;
 }
 
-.img-area:hover .circle-box {
+.img-area:hover .circle-box, .img-area.hover .circle-box {
   cursor: pointer;
   opacity: 0.5;
 }
 
-.img-area:hover .circle-box i {
+.img-area:hover .circle-box i, .img-area.hover .circle-box i {
   font-size: 45px;
   color: #fff;
   -webkit-transition: all 0.2s;
@@ -667,7 +669,7 @@ body {
 
 .desc-area {
   margin-bottom: 20px;
-  padding-right: 64px;
+  padding-right: 50px;
   line-height: 24px;
   font-size: 18px;
   color: #000;
@@ -975,7 +977,7 @@ body {
 .pick-wrap .pick-info .pick-prd li {
   float: left;
   position: relative;
-  width: 180px;
+  width: 173px;
   margin-right: 40px;
 }
 
@@ -1332,7 +1334,7 @@ body {
 
 .full-brand-area .full-brand-info .desc-area {
   margin-bottom: 20px;
-  padding-right: 64px;
+  padding-right: 50px;
   line-height: 24px;
   font-size: 18px;
   color: #000;

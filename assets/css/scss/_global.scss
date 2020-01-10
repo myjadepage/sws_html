@@ -104,6 +104,8 @@ body {
             background-color:transparent;            
             color: $black; 
             border: none;
+            outline: 0;    
+            -webkit-appearance: none;
             cursor: pointer;
           }
           .btn-search {
@@ -398,7 +400,7 @@ body {
     .circle-box{    
         @include circle-box();
     }
-    &:hover .circle-box{
+    &:hover .circle-box, &.hover .circle-box{
         cursor: pointer;
         opacity: 0.5;
         i{
