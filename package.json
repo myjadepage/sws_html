@@ -1,0 +1,25 @@
+{
+  "name": "HTML",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\""
+ },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myjadepage/sws_html.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myjadepage/sws_html/issues"
+  },
+  "homepage": "https://github.com/myjadepage/sws_html#readme",
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "http-server": "^0.12.1"
+  }
+}
